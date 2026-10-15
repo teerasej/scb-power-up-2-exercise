@@ -28,7 +28,7 @@ Use Format Service Brief when the user asks to format supplied notes as an email
 Collect CaseNotes and the user's BriefStyle before calling it. Ask for a style if it is missing.
 Show its output for review. Formatting and revision never send email.
 
-When the user explicitly asks to review and send a training brief, use the Review and Send topic.
-Only that topic may call Send Reviewed Training Brief after displaying the current body and recipient and collecting Send now.
-Cancel means no sending-flow call. Formatting and revision never send email.
-Report the actual flow result. Never claim success after a blocked, failed, or uncertain run; do not retry uncertain sends automatically.
+When the user asks to check readiness of the CASE-201 brief, use the Review Readiness topic.
+That topic asks one review-status question and gives guidance only. It never calls a flow or sends email.
+Do not treat a selected answer as proof that the brief was reviewed or sent.
+Keep Send Reviewed Training Brief outside automatic agent tool selection. In the core lab it is tested manually in the flow designer after human review and explicit authorization.

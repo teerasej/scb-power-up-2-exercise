@@ -9,11 +9,11 @@
 - Knowledge source ที่ตรวจ:
 - Prompt inputs: CaseNotes / BriefStyle:
 - Email body ฉบับที่ review แล้ว:
-- Topic: Review and Send:
+- Topic: Review Readiness และคำตอบที่เลือก:
 - Flow จาก Exercise 4: Send Reviewed Training Brief:
 - Expected result:
-- หลักฐาน Tool call / Topic path / Flow run / Mailbox:
-- กรณี Cancel หรือ boundary ที่แสดง:
+- หลักฐาน Prompt tool call / Topic path / Designer flow run / Mailbox:
+- กรณีอีกคำตอบใน Topic หรือ boundary ของ designer flow ที่แสดง:
 - Approval point และผู้รับทดสอบที่ได้รับอนุญาต:
 - Recovery line เมื่อ component ไม่พร้อม:
 - Gap และวิธี retest:

@@ -32,7 +32,7 @@ ZIP รวมไฟล์ฝึกและแบบบันทึกทั้�
 | <DownloadFile file="agent-1-final-instructions.txt">Instructions หลัง Exercise 1</DownloadFile> | Instructions อย่างเดียว |
 | <DownloadFile file="agent-2-instructions.txt">Instructions หลัง Exercise 2</DownloadFile> | รวมกติกา Knowledge |
 | <DownloadFile file="agent-3-instructions.txt">Instructions หลัง Exercise 3–4</DownloadFile> | รวมการเรียก Prompt tool |
-| <DownloadFile file="agent-5-instructions.txt">Instructions หลัง Exercise 5</DownloadFile> | รวมการใช้ Review and Send Topic |
+| <DownloadFile file="agent-5-instructions.txt">Instructions หลัง Exercise 5</DownloadFile> | รวมการใช้ Review Readiness Topic เพื่อให้คำแนะนำ |
 
 ชื่อไฟล์ agent-1/2/3/5 หมายถึง checkpoint ของ **Agent ตัวเดียว** ไม่ใช่ Agent คนละตัว ใช้เทียบหรือกู้ส่วนที่ขาดหลังทดลองแล้ว ไม่อัปโหลด Instructions เป็น Knowledge และไฟล์เหล่านี้ไม่ได้สร้าง components ให้โดยอัตโนมัติ
 

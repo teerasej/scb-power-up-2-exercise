@@ -5,7 +5,7 @@ const exercises = [
   ['02-knowledge', '2 · Knowledge'],
   ['03-prompt-tool', '3 · Prompt tool'],
   ['04-agent-flow', '4 · Agent flow'],
-  ['05-topics', '5 · Topics'],
+  ['05-topics', '5 · Topics introduction'],
 ]
 
 export default defineConfig({

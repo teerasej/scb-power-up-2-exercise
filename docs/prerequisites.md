@@ -19,11 +19,11 @@ next: { text: "Exercise 1: Instructions", link: /exercises/01-instructions }
 
 1. ดาวน์โหลด <DownloadFile file="case-notes-03.txt">Case notes 03 — CASE-201</DownloadFile> และเปิด [หน้าไฟล์ฝึก](/resources/downloads)
 2. เก็บ <DownloadFile file="test-log.csv">Test log</DownloadFile> และ <DownloadFile file="gap-list.csv">Gap list</DownloadFile> ไว้กรอกผลของตนเอง
-3. ก่อน Exercise 5 รับ **Review and Send Topic skeleton** จากผู้สอนผ่านวิธีที่ตรวจแล้ว โดยยังไม่ผูกกับ flow ของผู้เรียนคนอื่น
+3. ก่อน Exercise 5 ตรวจว่าเปิด `Topics` และสร้าง Topic ใหม่ใน Agent ตัวเดิมได้
 4. เก็บ approved test inbox ใน Environment ฝึกและโน้ตส่วนตัว ไม่เติมลงในไฟล์ที่จะแชร์
 
-::: info Topic skeleton
-เว็บไซต์นี้มีคู่มือและไฟล์ข้อความสำหรับฝึก ไม่มี solution export ที่ import แล้วสร้าง Agent, Prompt, flow หรือ Topic ให้โดยอัตโนมัติ หากยังไม่ได้รับ skeleton ให้แจ้งผู้สอนก่อนเริ่ม Exercise 5
+::: info Topic introduction
+Exercise 5 สร้าง Topic เล็ก ๆ จากหน้าเปล่า ไม่ต้อง import starter หรือเชื่อม flow ใช้ standard harness; GitHub Copilot harness มีวิธี authoring ต่างออกไปซึ่งผู้สอนจะเปรียบเทียบให้ดู
 :::
 
 ## วิธีทำกิจกรรม

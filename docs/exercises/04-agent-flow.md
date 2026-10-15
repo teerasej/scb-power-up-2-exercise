@@ -8,9 +8,9 @@ next: {"text": "Exercise 5: Topics", "link": "/exercises/05-topics"}
 
 <ExerciseCover image="04-agent-flow" alt="ตรวจซองสรุปและถาดปลายทางที่อนุญาตก่อนผ่านจุดส่งเอกสาร" position="60% center" />
 
-เรามี email body จาก Prompt ใน Exercise 3 แล้ว ต่อไปจะสร้าง flow ที่รับผู้รับกับ body และส่งไปยัง inbox ทดสอบที่กำหนด เหมือนเตรียมบริการจัดส่งที่รับซองซึ่งตรวจแล้ว ส่วน Exercise 5 จะเพิ่มจุดรับเรื่องที่ถามและยืนยันกับผู้ใช้ก่อนเรียกบริการนี้ครับ
+เรามี email body จาก Prompt ใน Exercise 3 แล้ว ต่อไปจะสร้าง flow ที่รับผู้รับกับ body และส่งไปยัง inbox ทดสอบที่กำหนด เหมือนเตรียมบริการจัดส่งที่รับซองซึ่งตรวจแล้ว ส่วน Exercise 5 จะใช้สถานการณ์เดิมเพื่อรู้จัก Topic ที่ถามสถานะการตรวจสรุปและให้คำแนะนำครับ
 
-**ผลลัพธ์:** flow ชื่อ Send Reviewed Training Brief ที่มี input สองตัว พร้อมใช้ใน Topic ของ Exercise 5
+**ผลลัพธ์:** flow ชื่อ Send Reviewed Training Brief ที่มี input สองตัว พร้อมทดสอบด้วยตนเองใน flow designer
 
 > **License:** ต้องตรวจสอบสิทธิ์ Agent flow, publishing และ capacity ใน Copilot Studio รวมถึง Office 365 Outlook connection และ Exchange Online mailbox ของบัญชีฝึก Native Agent flow ไม่ได้ต้องมี Power Automate license แยกเพียงเพราะใช้ flow แต่สิทธิ์และ capacity ที่เกี่ยวข้องต้องพร้อม
 
@@ -26,7 +26,7 @@ next: {"text": "Exercise 5: Topics", "link": "/exercises/05-topics"}
 
 ## Practice 1: กำหนดสิ่งที่ flow ต้องรับ
 
-**Primary target:** สร้าง flow ที่มีข้อตกลง input ชัดเจนสำหรับ Topic ที่จะเรียกใช้
+**Primary target:** สร้าง flow ที่รับผู้รับและ body ได้อย่างชัดเจน
 
 1. เปิดหน้า `Flows` แล้วเลือกสร้าง `Agent flow` ใน Environment เดียวกับ Agent ไม่สร้างผ่านการเพิ่มเป็น agent-level tool
 2. ตั้งชื่อ
@@ -49,12 +49,12 @@ next: {"text": "Exercise 5: Topics", "link": "/exercises/05-topics"}
      EmailBody
      ```
 
-4. ตรวจว่าไม่มี input สำหรับ Subject หรือ Confirmation เราจะกำหนด Subject ใน send action และให้ Topic ใน Exercise 5 ควบคุมการยืนยัน
+4. ตรวจว่าไม่มี input สำหรับ Subject หรือ Confirmation เราจะกำหนด Subject ใน send action การกด Test เป็นคำสั่งทดสอบโดยผู้เรียนหลัง review และได้รับอนุญาต
 5. หาก designer สร้าง `Respond to the agent` ตั้งต้นไว้ ให้ย้ายไปใช้เป็น success response หลัง send action ใน Practice 3 อย่าปล่อย response เพิ่มไว้นอก Condition เพราะอาจตอบก่อนทราบผลจริง
 
 ### Checkpoint
 
-Flow มี input สองตัวและชื่อถูกต้อง จดชื่อ flow ไว้เพื่อเลือกตัวเดิมใน Exercise 5
+Flow มี input สองตัวและชื่อถูกต้อง จดชื่อ flow ไว้สำหรับตรวจ Run history และหลักฐานการทดสอบ
 
 ---
 
@@ -177,9 +177,9 @@ flowchart LR
 
 ---
 
-## Practice 4: ทดสอบ flow และเก็บชื่อไว้เชื่อมต่อ
+## Practice 4: ทดสอบ flow และเก็บหลักฐาน
 
-**Primary target:** ยืนยันข้อตกลงการรับ input และคืนผลของ flow ที่จะใช้ต่อ
+**Primary target:** ยืนยัน input และผลจริงของการทดสอบ flow ด้วยตนเอง
 
 1. ตรวจว่า body มาจากฉบับที่ review แล้วและได้รับอนุญาตให้ทดสอบส่ง จากนั้นเปิด `Test` ใน flow designer
 2. ใส่ approved test inbox ใน `RecipientEmail` และวาง body จาก Exercise 3 ใน `EmailBody` แล้วสั่งทดสอบหนึ่งครั้ง
@@ -196,10 +196,10 @@ flowchart LR
 
 ### Checkpoint
 
-Flow พร้อมให้ Topic เรียกด้วย input สองตัว มีหลักฐานตามที่รันจริง และทราบว่า output ใดต้องส่งกลับไปแสดงในบทสนทนา
+มีหลักฐาน input สองตัว ผลตอบกลับ และ mailbox ตามที่รันจริง การดูชื่อ flow หรือสถานะ Published อย่างเดียวไม่ยืนยันการส่งสำเร็จ
 
 ## Summary และสิ่งที่จะใช้ต่อ
 
-เราสร้างบริการส่งแล้ว ใน Exercise 5 จะเปิด Agent ตัวเดิมและเลือก **flow ตัวนี้** ใน Topic เพื่อรับ body กับผู้รับ แสดงให้ตรวจ แล้วเรียกเมื่อผู้ใช้ยืนยัน ไม่สร้าง flow ซ้ำครับ
+เราสร้างและทดสอบบริการส่งด้วยตนเองแล้ว ใน Exercise 5 จะเปิด Agent ตัวเดิมและลอง Topic แบบหนึ่งคำถามสองตัวเลือก เพื่อให้คำแนะนำเรื่องการตรวจสรุป CASE-201 กิจกรรมนั้นไม่มีการเรียก flow หรือส่ง email ครับ
 
 [กลับสารบัญ](/) | [Exercise 5: Topics](/exercises/05-topics)

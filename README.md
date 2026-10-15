@@ -27,7 +27,7 @@ The site carries the approved five-exercise learner guide, 14 synthetic practice
 
 Do not place instructor notes, credentials, tenant addresses, private source references, participant records, old archives or presentations anywhere in this directory. Repository contents outside navigation can become public too. No organization logo or repository/edit buttons are used.
 
-Topic skeleton distribution, learner access, capacity, Outlook connections and live exercise rehearsal still require instructor preparation. The website does not contain an importable solution. All 18 test cases start at `Not run`; site verification is not tenant or classroom readiness.
+Learner access, capacity, Outlook connections for Exercise 4, and live exercise rehearsal still require instructor preparation. Exercise 5 creates Review Readiness from blank without a starter, flow call or email. The website does not contain an importable solution. All 18 test cases start at `Not run`; site verification is not tenant or classroom readiness.
 
 ## Toolchain notes
 
@@ -37,7 +37,7 @@ The command wrapper uses a temporary copy if the workspace path contains `#`, wh
 
 ## Local verification
 
-Production build, source-content checks, local HTTP route/asset checks, and desktop/mobile browser inspection passed on 15 October 2026. The site contains 10 content pages plus a generated 404 page and 14 downloadable learner files. Search, code copying, downloads and both diagrams were checked. The publication workflow and current deployment status are available in GitHub Actions.
+Production build, source-content checks, local HTTP route/asset checks, and desktop/mobile browser inspection passed on 15 October 2026. The site contains 10 content pages plus a generated 404 page and 14 downloadable learner files. Search, code copying, downloads and the Exercise 4 flow diagram are part of release checks. Exercise 5 now has one Question, two choices and two Messages; its earlier integration diagram was removed. The publication workflow and current deployment status are available in GitHub Actions.
 
 ## SCB visual theme
 
