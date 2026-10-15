@@ -1,0 +1,7 @@
+Fictional Training Bank — Lab Notice
+Training example only. Version LAB-NOTICE.
+
+Section A: Lab envelope rule
+แนบสรุป CASE-201 ได้สูงสุด 3 หน้า
+ข้อความนี้จงใจขัดแย้งกับ Section C ของ escalation-roles.txt เพื่อฝึกตรวจ source conflict
+ไม่ระบุว่าฉบับใดมีอำนาจสูงกว่า ผู้ตรวจทานต้องยืนยันกติกาที่ถูกต้องก่อนใช้

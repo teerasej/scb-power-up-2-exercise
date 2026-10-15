@@ -1,0 +1,54 @@
+name: Publish learner site to GitHub Pages
+
+on:
+  push:
+    branches: [codex/scb-power-up-2-site]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
+    steps:
+      - name: Check out learner source
+        uses: actions/checkout@v7.0.1
+      - name: Set up Node.js
+        uses: actions/setup-node@v7.1.0
+        with:
+          node-version: '24'
+          cache: npm
+      - name: Install locked dependencies
+        run: npm ci
+      - name: Configure Pages
+        uses: actions/configure-pages@v6.0.0
+      - name: Package learner files and build site
+        run: npm run docs:build
+        env:
+          SITE_BASE: /scb-power-up-2-exercise/
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v5.0.0
+        with:
+          path: docs/.vitepress/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@v5.0.1

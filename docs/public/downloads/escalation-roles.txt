@@ -1,0 +1,16 @@
+Fictional Training Bank — Escalation Roles
+Training example only. Not SCB policy. Version LAB-1.
+
+Section A: ผู้รับผิดชอบในโจทย์ฝึก
+Service Desk: รับและจัดระเบียบคำขอ
+Document Support: ตรวจสอบคำขอเอกสารจากข้อมูลที่มี
+Service Reviewer: ตรวจทานความถูกต้องและปลายทางก่อนส่งสรุป
+
+Section B: การส่งต่อ
+สรุปต้องมี Case ID, คำขอ, ข้อเท็จจริง, ข้อมูลที่ขาด และคำถามติดตาม
+การส่งสรุปไม่ได้ยืนยันว่าคำขอได้รับการแก้ไขแล้ว
+การส่ง email ต้องมีการ review เนื้อหาและผู้รับก่อนยืนยัน
+
+Section C: Lab envelope rule
+แนบสรุป CASE-201 ได้สูงสุด 2 หน้า ข้อความนี้เป็นกติกาสมมติของโจทย์ฝึก
+ไม่มี SLA หรือกำหนดเวลาตอบลูกค้าในคู่มือนี้

@@ -1,0 +1,86 @@
+:root {
+  --vp-font-family-base: 'Noto Sans Thai', system-ui, sans-serif;
+  --vp-font-family-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', 'Noto Sans Thai', monospace;
+  --vp-c-brand-1: #7a58bf;
+  --vp-c-brand-2: #6945a9;
+  --vp-c-brand-3: #7a58bf;
+  --vp-c-brand-soft: rgba(122, 88, 191, .10);
+  --vp-home-hero-name-color: #7a58bf;
+  --course-gold: #f2b234;
+  --vp-button-brand-bg: #7a58bf;
+  --vp-button-brand-hover-bg: #6945a9;
+  --vp-button-brand-text: #ffffff;
+  --vp-button-brand-hover-text: #ffffff;
+}
+.dark {
+  --vp-c-brand-1: #cbb2ef;
+  --vp-c-brand-2: #dbc7f7;
+  --vp-c-brand-3: #7a58bf;
+  --vp-home-hero-name-color: #cbb2ef;
+  --vp-c-brand-soft: rgba(203, 178, 239, .12);
+  --vp-button-brand-bg: #7a58bf;
+  --vp-button-brand-hover-bg: #6945a9;
+}
+.vp-doc { font-size: 16px; line-height: 1.9; }
+.vp-doc p, .vp-doc li { line-height: 1.9; }
+.vp-doc h1 { line-height: 1.55; letter-spacing: -.025em; }
+.vp-doc h2, .vp-doc h3 { line-height: 1.65; }
+.vp-doc table { font-size: 14px; }
+.vp-doc th, .vp-doc td { min-width: 100px; }
+.vp-doc div[class*='language-'] code { font-size: 14px; line-height: 1.85; }
+.VPHero .text { line-height: 1.35; }
+.VPHero .tagline { line-height: 1.8; max-width: 700px; }
+.VPFeature .details { line-height: 1.9; }
+.VPSidebarItem .text { line-height: 1.65; }
+.flow-diagram { margin: 28px 0; padding: 18px; border: 1px solid var(--vp-c-divider); border-radius: 12px; background: var(--vp-c-bg-soft); }
+.flow-diagram figcaption { font-size: 13px; color: var(--vp-c-text-2); margin-bottom: 16px; }
+.diagram-scroll { overflow-x: auto; padding: 8px 0; }
+.diagram-scroll svg { max-width: none !important; height: auto; }
+.flow-diagram .nodeLabel p { line-height: 1.5; margin: 0; }
+.flow-diagram details { font-size: 13px; margin-top: 12px; }
+.flow-diagram summary { cursor: pointer; }
+.flow-diagram pre { overflow-x: auto; line-height: 1.7; }
+@media (max-width: 640px) {
+  .vp-doc { font-size: 16px; }
+  .VPHero .name { font-size: 30px; }
+  .VPHero .text { font-size: 34px; }
+  .flow-diagram { padding: 12px; margin-inline: 0; }
+}
+
+/* SCB accent colors stay in the interface; each illustration has its own related palette. */
+.VPNavBarTitle .title::before { content: ''; width: 4px; height: 19px; margin-right: 10px; background: var(--course-gold); border-radius: 4px; }
+.course-hero { position: relative; overflow: hidden; isolation: isolate; min-height: 570px; aspect-ratio: 16 / 9; max-width: 1216px; margin: 32px auto 48px; border-radius: 20px; background: #f6f3fa; }
+.course-hero-art { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; z-index: -2; }
+.course-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, #f6f3fa 0%, rgba(246,243,250,.98) 25%, rgba(246,243,250,.88) 38%, transparent 62%); z-index: -1; }
+.course-hero-copy { width: 45%; padding: 42px 0 44px 42px; }
+.course-hero-name { font-size: 22px; line-height: 1.7; font-weight: 600; color: #7a58bf; margin: 0 0 12px; }
+.course-hero h1 { font-size: 42px; line-height: 1.45; letter-spacing: -.025em; font-weight: 600; color: #27222e; margin: 0; }
+.course-hero-tagline { font-size: 18px; line-height: 1.9; color: #514957; margin: 20px 0 26px; }
+.course-hero-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.course-hero .VPButton.alt { background: #ffffff; color: #514957; border-color: #d8cfdf; }
+.course-hero .VPButton.alt:hover { background: #eee7f6; }
+.exercise-cover { margin: 24px 0 30px; overflow: hidden; border-radius: 12px; border: 1px solid var(--vp-c-divider); }
+.exercise-cover img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 1; object-fit: cover; }
+.dark .course-hero { background: #211a2b; }
+.dark .course-hero::after { background: linear-gradient(90deg, #211a2b 0%, rgba(33,26,43,.99) 26%, rgba(33,26,43,.95) 40%, rgba(33,26,43,.18) 68%); }
+.dark .course-hero-name { color: #cbb2ef; }
+.dark .course-hero h1 { color: #f8f5fc; }
+.dark .course-hero-tagline { color: #ded6e8; }
+.dark .course-hero .VPButton.alt { background: #32283f; color: #f2eaf9; border-color: #665576; }
+.dark .course-hero .VPButton.alt:hover { background: #40324f; }
+@media (max-width: 1279px) and (min-width: 768px) {
+ .course-hero { margin-inline: 32px; }
+ .course-hero-copy { width: 49%; padding-left: 32px; }
+ .course-hero h1 { font-size: 36px; }
+}
+@media (max-width: 767px) {
+ .course-hero { display: flex; flex-direction: column; min-height: 0; aspect-ratio: auto; margin: 20px 24px 40px; border-radius: 14px; }
+ .course-hero-art { position: relative; inset: auto; height: auto; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; z-index: auto; }
+ .course-hero::after { display: none; }
+ .course-hero-copy { width: 100%; padding: 24px; }
+ .course-hero-name { font-size: 20px; margin-bottom: 10px; }
+ .course-hero h1 { font-size: 30px; line-height: 1.5; }
+ .course-hero-tagline { font-size: 16px; margin: 16px 0 22px; }
+ .course-hero-actions { gap: 10px; }
+ .exercise-cover img { height: auto; aspect-ratio: 5 / 2; }
+}

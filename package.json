@@ -1,0 +1,26 @@
+{
+  "name": "power-up-2-learner-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "docs:dev": "node scripts/site.mjs dev",
+    "docs:build": "npm run samples:zip && node scripts/site.mjs build",
+    "docs:preview": "node scripts/preview.mjs",
+    "samples:zip": "python3 scripts/package-samples.py"
+  },
+  "devDependencies": {
+    "vitepress": "1.6.4"
+  },
+  "dependencies": {
+    "vue": "^3.5.0",
+    "mermaid": "12.2.0",
+    "@fontsource/noto-sans-thai": "^5.2.0"
+  },
+  "overrides": {
+    "vite": "6.4.4"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}
