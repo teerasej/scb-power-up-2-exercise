@@ -48,3 +48,7 @@ Optimized responsive artwork is in `docs/public/images/`. The custom home hero r
 ## Combined sample download
 
 The hero’s second button directly downloads `docs/public/downloads/power-up-2-sample-files.zip`. It contains all 14 current sample files and templates, with the same bytes as the individual downloads. `npm run docs:build` regenerates and verifies this ZIP before building; use `npm run samples:zip` to refresh it independently. The explicit file list in `scripts/package-samples.py` excludes old archives, illustrations and instructor material.
+
+## Practice illustrations
+
+All 22 Practice headings across the five exercises and readiness worksheet have distinct generated illustrations. `PracticeIllustration` uses a public asset mapping for Thai alternative text, actual dimensions and base-aware responsive WebP URLs. Images preserve the complete scene proportionally. Keep original generation files and provenance outside this repository. The text-only worksheet download and sample ZIP do not include artwork.

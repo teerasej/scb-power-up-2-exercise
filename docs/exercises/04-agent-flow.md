@@ -26,6 +26,8 @@ next: {"text": "Exercise 5: Topics", "link": "/exercises/05-topics"}
 
 ## Practice 1: กำหนดสิ่งที่ flow ต้องรับ
 
+<PracticeIllustration id="ex04-p01" />
+
 **Primary target:** สร้าง flow ที่รับผู้รับและ body ได้อย่างชัดเจน
 
 1. เปิดหน้า `Flows` แล้วเลือกสร้าง `Agent flow` ใน Environment เดียวกับ Agent ไม่สร้างผ่านการเพิ่มเป็น agent-level tool
@@ -59,6 +61,8 @@ Flow มี input สองตัวและชื่อถูกต้อง �
 ---
 
 ## Practice 2: ตรวจปลายทางและเนื้อหาก่อนส่ง
+
+<PracticeIllustration id="ex04-p02" />
 
 **Primary target:** บล็อกผู้รับที่ไม่ตรงกับ inbox ที่อนุญาตและ body ที่ว่าง
 
@@ -126,6 +130,8 @@ flowchart LR
 
 ## Practice 3: ส่งข้อความและคืนผลจริง
 
+<PracticeIllustration id="ex04-p03" />
+
 **Primary target:** ให้ flow คืนสถานะตามผลของ send action
 
 1. ใน branch `True` เพิ่ม `Office 365 Outlook` > `Send an email (V2)` แล้วใช้ connection ฝึกที่ได้รับอนุญาต
@@ -178,6 +184,8 @@ flowchart LR
 ---
 
 ## Practice 4: ทดสอบ flow และเก็บหลักฐาน
+
+<PracticeIllustration id="ex04-p04" />
 
 **Primary target:** ยืนยัน input และผลจริงของการทดสอบ flow ด้วยตนเอง
 

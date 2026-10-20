@@ -24,6 +24,8 @@ next: {"text": "Exercise 4: Agent flow", "link": "/exercises/04-agent-flow"}
 
 ## Practice 1: สร้าง Prompt ที่รับข้อมูลสองช่อง
 
+<PracticeIllustration id="ex03-p01" />
+
 **Primary target:** สร้าง Prompt ที่ใช้ input chips จริงเพื่อจัดบันทึกเป็น email body
 
 1. เปิด Agent ตัวเดิม ไปที่ `Tools` > `Add a tool` > `Prompt` หาก UI มี `New tool` ให้เลือก Prompt จากรายการนั้น
@@ -70,6 +72,8 @@ Prompt รับ input สองช่องและสร้าง body ได
 ---
 
 ## Practice 2: ให้ input รู้จัก BriefStyle entity
+
+<PracticeIllustration id="ex03-p02" />
 
 **Primary target:** เชื่อม input ของ Tool กับ closed-list entity เพื่อรับตัวเลือกและคำพ้อง
 
@@ -147,6 +151,8 @@ Prompt รับ input สองช่องและสร้าง body ได
 ---
 
 ## Practice 3: ตรวจค่าที่ Agent ส่งให้ Prompt
+
+<PracticeIllustration id="ex03-p03" />
 
 **Primary target:** ตรวจการเรียก Tool และค่ารูปแบบที่รู้จำจากบทสนทนา
 

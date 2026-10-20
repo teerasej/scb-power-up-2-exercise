@@ -24,6 +24,8 @@ next: {"text": "Exercise 2: Knowledge", "link": "/exercises/02-knowledge"}
 
 ## Practice 1: สร้าง Agent ของเรา
 
+<PracticeIllustration id="ex01-p01" />
+
 **Primary target:** สร้าง Agent สำหรับจัดระเบียบบันทึกคำขอเอกสาร
 
 1. เปิด Copilot Studio แล้วเลือก Environment ฝึก
@@ -49,6 +51,8 @@ next: {"text": "Exercise 2: Knowledge", "link": "/exercises/02-knowledge"}
 ---
 
 ## Practice 2: กำหนดบทบาทและเก็บคำตอบตั้งต้น
+
+<PracticeIllustration id="ex01-p02" />
 
 **Primary target:** สังเกตผลของ Instructions ตั้งต้นจากคำขอเดียวกัน
 
@@ -77,6 +81,8 @@ next: {"text": "Exercise 2: Knowledge", "link": "/exercises/02-knowledge"}
 
 ## Practice 3: กำหนดรูปแบบของสรุป
 
+<PracticeIllustration id="ex01-p03" />
+
 **Primary target:** ทำให้สรุปมีหัวข้อที่คนรับงานตรวจต่อได้
 
 1. กลับไปที่ `Instructions` แล้วเพิ่มข้อความนี้ต่อท้ายข้อความเดิม
@@ -98,6 +104,8 @@ next: {"text": "Exercise 2: Knowledge", "link": "/exercises/02-knowledge"}
 
 ## Practice 4: จัดการข้อมูลที่ยังไม่ทราบ
 
+<PracticeIllustration id="ex01-p04" />
+
 **Primary target:** ให้ Agent ระบุข้อมูลขาดแทนการแต่งข้อเท็จจริง
 
 1. เพิ่ม rule ต่อไปนี้ใน Instructions
@@ -118,6 +126,8 @@ next: {"text": "Exercise 2: Knowledge", "link": "/exercises/02-knowledge"}
 ---
 
 ## Practice 5: กำหนดขอบเขตและเปรียบเทียบผล
+
+<PracticeIllustration id="ex01-p05" />
 
 **Primary target:** ให้ Agent รักษาขอบเขตของผู้ช่วยจัดบันทึก
 

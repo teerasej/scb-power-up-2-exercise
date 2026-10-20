@@ -1,0 +1,332 @@
+{
+  "ex01-p01": {
+    "alt": "เจ้าหน้าที่จัดสมุดและถาดเอกสารเพื่อเริ่มงาน",
+    "width": 1774,
+    "height": 887,
+    "variants": [
+      {
+        "src": "/images/practices/ex01-p01-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/practices/ex01-p01-1440.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "ex01-p02": {
+    "alt": "เพื่อนร่วมงานส่งคู่มือการทำงานให้เจ้าหน้าที่",
+    "width": 1774,
+    "height": 887,
+    "variants": [
+      {
+        "src": "/images/practices/ex01-p02-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/practices/ex01-p02-1440.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "ex01-p03": {
+    "alt": "เจ้าหน้าที่จัดกลุ่มบันทึกให้เป็นหมวดหมู่",
+    "width": 1774,
+    "height": 887,
+    "variants": [
+      {
+        "src": "/images/practices/ex01-p03-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/practices/ex01-p03-1440.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "ex01-p04": {
+    "alt": "เจ้าหน้าที่สังเกตช่องข้อมูลที่ยังว่างและแยกไว้ตรวจต่อ",
+    "width": 1774,
+    "height": 887,
+    "variants": [
+      {
+        "src": "/images/practices/ex01-p04-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/practices/ex01-p04-1440.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "ex01-p05": {
+    "alt": "เจ้าหน้าที่แยกงานจัดเอกสารออกจากงานอนุมัติของผู้รับผิดชอบ",
+    "width": 1774,
+    "height": 887,
+    "variants": [
+      {
+        "src": "/images/practices/ex01-p05-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/practices/ex01-p05-1440.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "ex02-p01": {
+    "alt": "เจ้าหน้าที่เปิดแฟ้มอ้างอิงประกอบแนวทางทำงาน",
+    "width": 1774,
+    "height": 887,
+    "variants": [
+      {
+        "src": "/images/practices/ex02-p01-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/practices/ex02-p01-1440.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "ex02-p02": {
+    "alt": "เจ้าหน้าที่เพิ่มแฟ้มคู่มือสามฉบับบนชั้น",
+    "width": 1774,
+    "height": 887,
+    "variants": [
+      {
+        "src": "/images/practices/ex02-p02-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/practices/ex02-p02-1440.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "ex02-p03": {
+    "alt": "เจ้าหน้าที่เทียบสรุปกับแฟ้มต้นฉบับด้วยแว่นขยาย",
+    "width": 1774,
+    "height": 887,
+    "variants": [
+      {
+        "src": "/images/practices/ex02-p03-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/practices/ex02-p03-1440.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "ex02-p04": {
+    "alt": "เจ้าหน้าที่วางแหล่งข้อมูลที่ต่างกันคู่กันเพื่อขอให้ตรวจสอบ",
+    "width": 1774,
+    "height": 887,
+    "variants": [
+      {
+        "src": "/images/practices/ex02-p04-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/practices/ex02-p04-1440.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "ex02-p05": {
+    "alt": "เจ้าหน้าที่ชี้ว่าคู่มือยังไม่มีข้อมูลสำหรับคำถามของผู้ใช้",
+    "width": 1774,
+    "height": 887,
+    "variants": [
+      {
+        "src": "/images/practices/ex02-p05-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/practices/ex02-p05-1440.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "ex03-p01": {
+    "alt": "เจ้าหน้าที่เตรียมโน้ตและบัตรรูปแบบไว้ในถาดข้อมูลสองช่อง",
+    "width": 1774,
+    "height": 887,
+    "variants": [
+      {
+        "src": "/images/practices/ex03-p01-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/practices/ex03-p01-1440.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "ex03-p02": {
+    "alt": "เจ้าหน้าที่จัดบัตรรูปแบบที่มีความหมายเหมือนกันลงสองกลุ่ม",
+    "width": 1774,
+    "height": 887,
+    "variants": [
+      {
+        "src": "/images/practices/ex03-p02-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/practices/ex03-p02-1440.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "ex03-p03": {
+    "alt": "เจ้าหน้าที่ตรวจโน้ตและรูปแบบที่ถูกส่งไปจัดสรุป",
+    "width": 1774,
+    "height": 887,
+    "variants": [
+      {
+        "src": "/images/practices/ex03-p03-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/practices/ex03-p03-1440.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "ex04-p01": {
+    "alt": "เจ้าหน้าที่เตรียมบัตรปลายทางและเนื้อหาสำหรับซองเอกสาร",
+    "width": 1774,
+    "height": 887,
+    "variants": [
+      {
+        "src": "/images/practices/ex04-p01-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/practices/ex04-p01-1440.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "ex04-p02": {
+    "alt": "เจ้าหน้าที่ตรวจปลายทางและตรวจว่าซองมีเนื้อหาอยู่จริง",
+    "width": 1774,
+    "height": 887,
+    "variants": [
+      {
+        "src": "/images/practices/ex04-p02-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/practices/ex04-p02-1440.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "ex04-p03": {
+    "alt": "เจ้าหน้าที่รับใบแจ้งผลจากจุดจัดส่งเอกสาร",
+    "width": 1774,
+    "height": 887,
+    "variants": [
+      {
+        "src": "/images/practices/ex04-p03-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/practices/ex04-p03-1440.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "ex04-p04": {
+    "alt": "เจ้าหน้าที่เทียบข้อมูลการทดสอบกับเอกสารที่ได้รับจริง",
+    "width": 1774,
+    "height": 887,
+    "variants": [
+      {
+        "src": "/images/practices/ex04-p04-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/practices/ex04-p04-1440.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "ex05-p01": {
+    "alt": "เจ้าหน้าที่ถามผู้ใช้แล้วเลือกคำแนะนำระหว่างการทบทวนกับการแก้ไข",
+    "width": 1774,
+    "height": 887,
+    "variants": [
+      {
+        "src": "/images/practices/ex05-p01-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/practices/ex05-p01-1440.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "readiness-p01": {
+    "alt": "เจ้าหน้าที่ทบทวนผลที่บันทึกไว้คู่กับหลักฐาน",
+    "width": 1774,
+    "height": 887,
+    "variants": [
+      {
+        "src": "/images/practices/readiness-p01-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/practices/readiness-p01-1440.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "readiness-p02": {
+    "alt": "ผู้ตรวจทานอ่านเนื้อหาและปลายทางก่อนอนุญาตให้ส่ง",
+    "width": 1774,
+    "height": 887,
+    "variants": [
+      {
+        "src": "/images/practices/readiness-p02-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/practices/readiness-p02-1440.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "readiness-p03": {
+    "alt": "เพื่อนร่วมงานอธิบายการส่งต่อจากโน้ตไปสู่สรุปและถาดจัดส่ง",
+    "width": 1774,
+    "height": 887,
+    "variants": [
+      {
+        "src": "/images/practices/readiness-p03-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/practices/readiness-p03-1440.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "readiness-p04": {
+    "alt": "เจ้าหน้าที่จดสิ่งที่ยังขาดและงานที่ต้องทำต่อร่วมกับเพื่อน",
+    "width": 1774,
+    "height": 887,
+    "variants": [
+      {
+        "src": "/images/practices/readiness-p04-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/practices/readiness-p04-1440.webp",
+        "width": 1440
+      }
+    ]
+  }
+}

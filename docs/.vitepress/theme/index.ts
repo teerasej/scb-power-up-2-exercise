@@ -1,5 +1,6 @@
 import { h } from 'vue'
 import CourseHero from './components/CourseHero.vue'
+import PracticeIllustration from './components/PracticeIllustration.vue'
 import ExerciseCover from './components/ExerciseCover.vue'
 import DownloadFile from './components/DownloadFile.vue'
 import DefaultTheme from 'vitepress/theme'
@@ -16,5 +17,6 @@ export default {
     app.component('MermaidDiagram', MermaidDiagram)
     app.component('DownloadFile', DownloadFile)
     app.component('ExerciseCover', ExerciseCover)
+    app.component('PracticeIllustration', PracticeIllustration)
   },
 }

@@ -21,6 +21,8 @@ next: {"text": "ทบทวนหลักฐานและ gap", "link": "/re
 
 ## Practice 1: สร้างคำถามและคำแนะนำสองเส้นทาง
 
+<PracticeIllustration id="ex05-p01" />
+
 **Primary target:** ให้คำตอบของผู้ใช้เลือก Message ที่ตรงกันใน Topic
 
 1. เปิด Agent ตัวเดิม ไปที่ `Topics` เลือก `Add a topic` > `From blank` แล้วตั้งชื่อ

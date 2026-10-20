@@ -25,6 +25,8 @@ CASE-201 ยังขาดชนิดเอกสารและวันท�
 
 ## Practice 1: ขยายขอบเขต Instructions ให้ค้นคู่มือได้
 
+<PracticeIllustration id="ex02-p01" />
+
 **Primary target:** เพิ่มหน้าที่ค้นคำแนะนำโดยรักษากติกาข้อเท็จจริงเดิม
 
 1. เปิด Service Request Assistant ตัวเดิม ไม่ต้องสร้าง Agent ใหม่
@@ -56,6 +58,8 @@ Agent ตัวเดิมมี Instructions สำหรับ case facts แ
 
 ## Practice 2: เพิ่มแฟ้ม Knowledge
 
+<PracticeIllustration id="ex02-p02" />
+
 **Primary target:** เชื่อม Agent กับคู่มือฝึกสามฉบับ
 
 1. เปิด `Knowledge` > `Add knowledge` แล้วเลือกอัปโหลดไฟล์
@@ -71,6 +75,8 @@ Knowledge สามฉบับเป็น Ready และบอกหน้า
 ---
 
 ## Practice 3: ตรวจคำตอบกับคู่มือ
+
+<PracticeIllustration id="ex02-p03" />
 
 **Primary target:** ตรวจว่า Agent อ้างข้อมูลจาก Knowledge ที่ตรงกับต้นฉบับ
 
@@ -93,6 +99,8 @@ Knowledge สามฉบับเป็น Ready และบอกหน้า
 
 ## Practice 4: ตรวจข้อขัดแย้งแล้วคืนสภาพ Knowledge
 
+<PracticeIllustration id="ex02-p04" />
+
 **Primary target:** สังเกตการรายงานข้อขัดแย้งอย่างมีแหล่งอ้างอิง
 
 1. เพิ่ม Conflict notice เป็น Knowledge แล้วรอ `Ready`
@@ -113,6 +121,8 @@ Knowledge สามฉบับเป็น Ready และบอกหน้า
 ---
 
 ## Practice 5: ตรวจข้อมูลที่คู่มือไม่ได้บอก
+
+<PracticeIllustration id="ex02-p05" />
 
 **Primary target:** ให้ Agent ระบุข้อจำกัดของ Knowledge โดยไม่สร้างกฎเพิ่ม
 

@@ -7,6 +7,8 @@ next: false
 
 ## Practice 1: ทบทวนหลักฐาน
 
+<PracticeIllustration id="readiness-p01" />
+
 **Primary target:** แยกผลที่ตรวจแล้วจากส่วนที่ยังไม่ได้ทดสอบ
 
 1. เปิด Test log ของ Service Request Assistant เลือกตัวอย่างจาก Instructions, Knowledge, Prompt, flow และ Topic ตามที่ได้ทำจริง
@@ -16,6 +18,8 @@ next: false
 **Checkpoint:** เห็นว่าส่วนใดตรวจแล้ว ส่วนใดยังต้องทดสอบ และมี boundary case ที่ตรวจได้ตามกิจกรรมที่ทำ
 
 ## Practice 2: ระบุ approval point
+
+<PracticeIllustration id="readiness-p02" />
 
 **Primary target:** อธิบายสิ่งที่คนต้องตรวจก่อนส่งต่อ
 
@@ -27,6 +31,8 @@ next: false
 
 ## Practice 3: เล่าเส้นทางที่เชื่อมกัน
 
+<PracticeIllustration id="readiness-p03" />
+
 **Primary target:** อธิบายการส่งต่อข้อมูลระหว่าง components ของ Agent
 
 1. ใช้ [Demo run sheet](demo-run-sheet.md) เลือก Presenter/Operator และ Observer
@@ -36,6 +42,8 @@ next: false
 **Checkpoint:** แยกได้ว่า Prompt จัดสรุป, designer Test รัน flow และ Topic ให้คำแนะนำตามคำตอบ โดยไม่อ้างความสำเร็จที่ยังไม่มีหลักฐาน
 
 ## Practice 4: บันทึก gap และการตรวจครั้งต่อไป
+
+<PracticeIllustration id="readiness-p04" />
 
 **Primary target:** ระบุงานแก้ไขที่มีเจ้าของและเกณฑ์ตรวจซ้ำ
 
