@@ -15,7 +15,7 @@ npm run docs:build
 npm run docs:preview
 ```
 
-The local base is `/`. GitHub Pages builds use `SITE_BASE=/scb-power-up-2-exercise/` for the project URL. The workflow publishes pushes to `codex/scb-power-up-2-site` and also supports manual dispatch. Keep build output and dependencies ignored.
+The local base is `/`. GitHub Pages builds use `SITE_BASE=/scb-power-up-2-exercise/` for the project URL. The workflow publishes pushes to `main` and also supports manual dispatch. Keep build output and dependencies ignored.
 
 Website: https://teerasej.github.io/scb-power-up-2-exercise/
 

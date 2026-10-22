@@ -2,7 +2,7 @@ name: Publish learner site to GitHub Pages
 
 on:
   push:
-    branches: [codex/scb-power-up-2-site]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
