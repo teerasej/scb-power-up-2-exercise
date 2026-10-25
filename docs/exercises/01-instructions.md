@@ -6,9 +6,9 @@ next: {"text": "Exercise 2: Knowledge", "link": "/exercises/02-knowledge"}
 
 # Exercise 1: Instructions — เริ่มสร้าง Service Request Assistant
 
-<ExerciseCover image="01-instructions" alt="เจ้าหน้าที่จัดโน้ตที่กระจัดกระจายให้เป็นระเบียบโดยมีคู่มือการทำงานและผู้ช่วยอยู่ข้างกัน" position="50% center" />
+<ExerciseCover image="01-instructions" alt="เจ้าหน้าที่จัดโน้ตที่กระจัดกระจายให้เป็นระเบียบโดยมีคู่มือการทำงานและ Agent อยู่ข้างกัน" position="50% center" />
 
-เจ้าหน้าที่มีบันทึกติดตามคำขอเอกสาร CASE-201 แต่ข้อมูลยังไม่ครบ เราจะสร้างผู้ช่วยที่จัดบันทึกเป็นสรุป โดยแยกข้อเท็จจริงออกจากสิ่งที่ยังต้องถาม เหมือนจัดกระดาษบนโต๊ะให้คนรับงานต่ออ่านได้ง่ายครับ
+เจ้าหน้าที่มีบันทึกติดตามคำขอเอกสาร CASE-201 แต่ข้อมูลยังไม่ครบ เราจะสร้าง Agent ที่จัดบันทึกเป็นสรุป เหมือนจัดกระดาษบนโต๊ะให้คนรับงานต่ออ่านได้ง่ายครับ
 
 **ผลลัพธ์:** Service Request Assistant ที่มี Instructions ชัดเจน และหลักฐาน Before/After เราจะใช้ Agent ตัวนี้ต่อใน Exercises 2–5
 
@@ -16,7 +16,7 @@ next: {"text": "Exercise 2: Knowledge", "link": "/exercises/02-knowledge"}
 
 ## Prerequisites
 
-- บัญชีและ Environment ฝึกที่ได้รับอนุญาต ใช้ Copilot Studio **standard harness**
+- บัญชีและ Environment ที่ได้รับอนุญาต ใช้ Copilot Studio **standard harness**
 - <DownloadFile file="case-notes-03.txt">Case notes 03 — CASE-201</DownloadFile> และ <DownloadFile file="test-log.csv">Test log</DownloadFile>
 - ใช้ข้อมูลสมมติเท่านั้น ไม่ใส่ข้อมูลลูกค้าจริง
 
@@ -28,7 +28,7 @@ next: {"text": "Exercise 2: Knowledge", "link": "/exercises/02-knowledge"}
 
 **Primary target:** สร้าง Agent สำหรับจัดระเบียบบันทึกคำขอเอกสาร
 
-1. เปิด Copilot Studio แล้วเลือก Environment ฝึก
+1. เปิด [Copilot Studio](https://copilotstudio.microsoft.com/) แล้วเลือก Environment ที่เราได้รับอนุญาตใช้ในการฝึก
 2. เปิด `Agents` และสร้าง blank agent ใน standard experience หากหน้าจอแตกต่าง ให้ผู้สอนช่วยตรวจ harness
 3. ใน `Name` กรอกชื่อต่อไปนี้ จะเติมชื่อทีมท้ายชื่อก็ได้
 
@@ -36,17 +36,19 @@ next: {"text": "Exercise 2: Knowledge", "link": "/exercises/02-knowledge"}
    Service Request Assistant
    ```
 
-4. ใน `Description` กรอกข้อความต่อไปนี้ แล้วสร้าง Agent
+4. กด `Create` เพื่อเริ่มการสร้าง Agent
+5. รอจนข้อความบน Portal แสดงว่า Agent ถูกสร้างเรียบร้อย
+6. ในหน้า Overview > Detail > กดปุ่ม edit และแก้ไข `Description` โดยการกรอกข้อความต่อไปนี้ 
 
    ```text
    Helps staff organize fictional document-request notes, consult training guidance, and prepare reviewed internal briefs.
    ```
 
-5. ตรวจว่า `Knowledge` และ `Tools` ยังไม่มีรายการที่เราเพิ่ม จดชื่อ Agent ของตนไว้เพื่อเปิดใช้ตัวเดิมในทุก Exercise
+7. กดปุ่ม `Save` เพื่อบันทึกการแก้ไข Description
 
 ### Checkpoint
 
-เปิด Agent ของตนได้ และยังไม่มี Knowledge หรือ Tools
+เปิด Agent ของพวกเราที่สร้างไว้ได้ และยังไม่มี Knowledge หรือ Tools
 
 ---
 
@@ -54,7 +56,7 @@ next: {"text": "Exercise 2: Knowledge", "link": "/exercises/02-knowledge"}
 
 <PracticeIllustration id="ex01-p02" />
 
-**Primary target:** สังเกตผลของ Instructions ตั้งต้นจากคำขอเดียวกัน
+**Primary target:** สังเกตผลการทำงานของ Instructions ตั้งต้นจากคำขอเดียวกัน
 
 1. เปิด `Overview` > `Instructions` > `Edit` แล้ววางข้อความนี้
 
@@ -64,14 +66,15 @@ next: {"text": "Exercise 2: Knowledge", "link": "/exercises/02-knowledge"}
    Use only case facts supplied in the current conversation. Do not make banking decisions.
    ```
 
-2. `Save` แล้วเปิด `Test your agent` เริ่ม session ใหม่
-3. วางเนื้อหาทั้งไฟล์ Case notes 03 แล้วต่อท้ายด้วยคำขอต่อไปนี้
+2. กดปุ่ม `Save`
+3. แล้วเปิด `Test your agent` และกดปุ่ม เริ่ม session ใหม่
+4. วางเนื้อหาทั้งไฟล์ Case notes 03 แล้วต่อท้ายด้วยคำขอต่อไปนี้
 
    ```text
-   ช่วยจัด CASE-201 เป็นสรุปสำหรับส่งต่อภายใน
+   ช่วยจัด CASE-201 เป็นสรุปสำหรับส่งต่อภายในด้วย
    ```
 
-4. เก็บคำตอบจริงเป็น `Before` ในบันทึกของตน สังเกตว่าคำขอ ข้อเท็จจริง และข้อมูลที่ขาดแยกกันชัดเจนหรือยัง
+5. เก็บคำตอบจริงเป็น `Before` ในบันทึกของตน สังเกตว่าคำขอ ข้อเท็จจริง และข้อมูลที่ขาดแยกกันชัดเจนหรือยัง
 
 ### Checkpoint
 
@@ -129,7 +132,7 @@ next: {"text": "Exercise 2: Knowledge", "link": "/exercises/02-knowledge"}
 
 <PracticeIllustration id="ex01-p05" />
 
-**Primary target:** ให้ Agent รักษาขอบเขตของผู้ช่วยจัดบันทึก
+**Primary target:** ให้ Agent รักษาขอบเขตของ Agent จัดบันทึก
 
 1. เพิ่ม rules ต่อไปนี้
 
@@ -157,6 +160,6 @@ Before/After ใช้บันทึกเดียวกัน และ Agent
 
 ## Summary และสิ่งที่จะใช้ต่อ
 
-เราได้ Agent ที่จัด CASE-201 ได้จาก Instructions เก็บ Agent ตัวนี้ไว้ ใน Exercise 2 เราจะเพิ่มแฟ้มคู่มือให้ผู้ช่วยคนเดิมค้นหาวิธีเตรียมข้อมูลส่งต่อ
+เราได้ Agent ที่จัด CASE-201 ได้จาก Instructions เก็บ Agent ตัวนี้ไว้ ใน Exercise 2 เราจะเพิ่มแฟ้มคู่มือให้ Agent คนเดิมค้นหาวิธีเตรียมข้อมูลส่งต่อ
 
 [กลับสารบัญ](/) | [Exercise 2: Knowledge](/exercises/02-knowledge)

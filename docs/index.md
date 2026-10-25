@@ -24,17 +24,17 @@ features:
 
 ## เส้นทางการเรียนรู้
 
-การทำงานกับ Agent ก็เหมือนทำงานกับคู่หูที่โต๊ะเดียวกัน: **Instructions** คือแนวทางทำงาน, **Knowledge** คือแฟ้มคู่มือ, **Prompt** คือแบบจัดสรุป, **flow** คือขั้นตอนการทำงาน และ **Topic** คือรูปแบบการถามและเก็บข้อมูล แล้วให้คำแนะนำตามคำตอบครับ
+การทำงานกับ Agent ก็เหมือนทำงานกับคู่หูที่โต๊ะเดียวกัน: **Instructions** คือแนวทางทำงาน, **Knowledge** คือแฟ้มคู่มือ, **Prompt** คือคำสั่งหรือแบบจัดสรุป, **flow** คือขั้นตอนการทำงานแบบเจาะจงชัดเจน และ **Topic** คือการควบคุมรูปแบบการถามตอบและเก็บข้อมูลครับ
 
 | Exercise | สิ่งที่จะสร้าง | สิ่งที่นำไปใช้ต่อ |
 |---|---|---|
 | [1 · Instructions](/exercises/01-instructions) | Service Request Assistant | Agent และ Instructions |
-| [2 · Knowledge](/exercises/02-knowledge) | เพิ่มคู่มือให้ Agent ตัวเดิม | คำตอบที่ตรวจสอบได้ |
-| [3 · Prompt tool](/exercises/03-prompt-tool) | Format Service Brief และ BriefStyle entity | body ที่ review แล้ว |
-| [4 · Agent flow](/exercises/04-agent-flow) | Send Reviewed Training Brief | flow ที่รับ input สองตัว |
-| [5 · Topics](/exercises/05-topics) | Review Readiness | คำแนะนำสองเส้นทางตามคำตอบ โดยไม่มีการส่ง email |
+| [2 · Knowledge](/exercises/02-knowledge) | เพิ่มคู่มือให้ Agent ตัวเดิม | คำตอบของที่ตรวจสอบความถูกต้องได้ |
+| [3 · Prompt tool](/exercises/03-prompt-tool) | Format Service Brief และ BriefStyle entity | โครงสร้างของ Service Brief ที่ตรวจสอบความถูกต้องได้ |
+| [4 · Agent flow](/exercises/04-agent-flow) | Send Reviewed Training Brief | flow ที่รับ input สองตัวและใช้งานได้ |
+| [5 · Topics](/exercises/05-topics) | Review Readiness | คำแนะนำสองเส้นทางตามคำตอบ |
 
-ใช้ Agent ตัวเดิมตลอดทั้ง 5 Exercise และเก็บชื่อ components ไว้สำหรับขั้นถัดไป
+ในที่นี้พลจะให้เราใช้ Agent ตัวเดิมตลอดทั้ง 5 Exercise ครับ
 
 ## ตรวจเช็คว่าพร้อมหรือไม่
 
