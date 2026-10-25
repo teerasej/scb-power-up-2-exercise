@@ -1,0 +1,3 @@
+## Use these headings for a service brief:
+Case ID / Request / Confirmed facts / Missing information / Next questions.
+Keep the brief concise. Preserve supplied case IDs and dates.

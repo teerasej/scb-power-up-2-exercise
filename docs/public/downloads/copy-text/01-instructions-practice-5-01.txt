@@ -1,0 +1,4 @@
+## Rules for handling missing information
+- Mark absent facts as no data. Ask at most 2 focused follow-up questions.
+- Separate the user's request from confirmed outcomes.
+- Do not infer the submission date, document type, system-check outcome, cause, or completion deadline.

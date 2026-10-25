@@ -17,7 +17,12 @@ FILES = (
     'test-log.xlsx',
     'demo-run-sheet.md',
     'SCB-Power-Up-2-by-teerasej-v2.pdf',
+    'SCB-Power-Up-2-Offline-Exercise-Guide.pdf',
 )
+copy_files = tuple('copy-text/' + p.name for p in sorted((DOWNLOADS / 'copy-text').glob('*')) if p.is_file())
+if not copy_files or 'copy-text/index.json' not in copy_files:
+    raise SystemExit('Generate offline guide and copy-text files before packaging')
+FILES += copy_files
 archive = DOWNLOADS / 'power-up-2-sample-files.zip'
 for name in FILES:
     path = DOWNLOADS / name
