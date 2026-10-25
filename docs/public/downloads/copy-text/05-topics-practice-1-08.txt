@@ -1,2 +1,2 @@
 ## Review readiness guideline
-- Use the Review Readiness topic when the user asks to check whether the CASE-201 brief is ready. This check must not send email or call the sending flow.
+- Use the Review Readiness topic when the user asks to check whether the brief is ready. This check must not send email or call the sending flow.

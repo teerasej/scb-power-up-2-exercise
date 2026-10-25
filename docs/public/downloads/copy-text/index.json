@@ -1,5 +1,5 @@
 {
-  "source_revision": "4366fecc57200346a7420d8594742874ef883502",
+  "source_revision": "7d1d3719bc56be506a555db179da3472b3d9ffdf",
   "blocks": [
     {
       "file": "01-instructions-practice-1-01.txt",
@@ -433,7 +433,7 @@
       "route": "exercises/05-topics",
       "practice": "practice-1",
       "heading": "Practice 1: สร้างคำถามและคำแนะนำสองเส้นทาง",
-      "sha256": "5fcdd0382b07f3845f354338a6c159553a440e026072d410dd335068b9784d3b"
+      "sha256": "85a053011ccec6fafd508146225f474a141a4b7e9ccf75c0505b9e02cca45a92"
     },
     {
       "file": "05-topics-practice-1-03.txt",
@@ -475,7 +475,7 @@
       "route": "exercises/05-topics",
       "practice": "practice-1",
       "heading": "Practice 1: สร้างคำถามและคำแนะนำสองเส้นทาง",
-      "sha256": "bbac4723db6ba38714d2a5be85e7135d02491b13423f101a3b13a4927099db65"
+      "sha256": "ddb12684b34d34cd1d3a744d035020b47422c5334c299d4db118a241850dfda9"
     },
     {
       "file": "05-topics-practice-1-09.txt",
@@ -490,6 +490,13 @@
       "practice": "practice-1",
       "heading": "Practice 1: สร้างคำถามและคำแนะนำสองเส้นทาง",
       "sha256": "f3067facbdbd11c402ecfada3f6b1860ac3bdeabc66fe923190c4a62166c2f3e"
+    },
+    {
+      "file": "test-log-practice-1-01.txt",
+      "route": "resources/test-log",
+      "practice": "practice-1",
+      "heading": "Practice 1: บันทึกผลทดสอบหนึ่งสถานการณ์",
+      "sha256": "355a21932165578ecd0ac5cc498e5642a7fdaad7d6b8789aded6cc50b8a783c8"
     }
   ]
 }

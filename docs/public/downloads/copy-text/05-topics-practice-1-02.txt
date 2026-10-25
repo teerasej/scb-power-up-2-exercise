@@ -1,1 +1,1 @@
-Use when the user wants to check whether the CASE-201 brief is ready. Ask whether the facts have been reviewed, then provide guidance based on the answer. This topic does not send email or call a flow.
+Use when the user wants to check whether the brief is ready. Ask whether the facts have been reviewed, then provide guidance based on the answer. This topic does not send email or call a flow.
