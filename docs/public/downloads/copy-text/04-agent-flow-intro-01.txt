@@ -1,0 +1,3 @@
+flowchart LR
+ A["When an agent calls the flow"] --> B["Send an email (V2)"]
+ B --> C["Respond to the agent"]

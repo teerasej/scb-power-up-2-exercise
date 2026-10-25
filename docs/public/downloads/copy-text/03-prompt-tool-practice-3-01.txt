@@ -1,0 +1,4 @@
+## Guideline for formatting service brief
+Use Format Service Brief when the user asks to format supplied notes as a draft body of email.
+Collect CaseNotes and the user's BriefStyle before calling it. Ask for a style if it is missing.
+Show its output for review. Formatting and revision never send email.

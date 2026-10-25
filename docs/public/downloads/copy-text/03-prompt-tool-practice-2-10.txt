@@ -1,0 +1,1 @@
+Formats supplied  case notes into a Thai training into draft of body content for email using the user's selected brief style. Returns content for review; never sends email.

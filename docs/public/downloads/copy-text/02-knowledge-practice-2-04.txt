@@ -1,0 +1,1 @@
+Required checks for document content and email destination before sending.

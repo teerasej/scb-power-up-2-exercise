@@ -1,0 +1,32 @@
+@font-face {font-family: English;src:url('FONT_ROOT/EnglishRegular.ttf');font-weight:400}
+@font-face {font-family: English;src:url('FONT_ROOT/EnglishHeading.ttf');font-weight:600}
+@font-face {font-family: Thai;src:url('FONT_ROOT/ThaiRegular.ttf');font-weight:400}
+@font-face {font-family: Thai;src:url('FONT_ROOT/ThaiHeading.ttf');font-weight:600}
+@page {size:A4;margin:18mm 18mm 30mm;@bottom-left {content:element(footer)} @bottom-right {content:counter(page);font:10pt English;color:#60408c;vertical-align:middle}}
+body {font-family:English,Thai,sans-serif;font-size:11pt;line-height:1.6;color:#252233}
+footer {position:running(footer);font-size:8pt;line-height:1.5;color:#635a6c;width:155mm}
+a {color:#64418e;text-decoration:none}
+h1,h2,h3,strong,b {font-weight:600}
+h1 {font-size:24pt;line-height:1.35;color:#4c2875;margin:0 0 8mm;bookmark-level:1}
+h2 {font-size:16pt;line-height:1.45;color:#4c2875;margin:8mm 0 4mm;bookmark-level:2}
+h3 {font-size:13pt;line-height:1.5;color:#4c2875;margin:6mm 0 3mm;bookmark-level:3}
+h1,h2,h3 {break-after:avoid}
+section {break-before:page}
+p {margin:3mm 0;orphans:3;widows:3}
+li {margin:2mm 0;padding-left:1mm} ol,ul {padding-left:7mm}
+figure {margin:4mm 0 6mm;break-inside:avoid;break-after:avoid}
+figure img {display:block;max-width:100%;width:auto;max-height:48mm;margin:auto;object-fit:contain}
+.codeblock {margin:4mm 0;background:#f6f3fa;border-left:2pt solid #8b6bae;padding:3mm 4mm;break-inside:avoid}
+.copy-label {font-size:7.8pt;color:#655873;margin-bottom:2mm;overflow-wrap:anywhere}
+pre {font-family:English,Thai;font-size:10pt;line-height:1.55;white-space:pre-wrap;overflow-wrap:anywhere;margin:0;tab-size:4}
+code {font-family:English,Thai;font-size:10.3pt;background:#f3eff7;padding:0 1mm}
+blockquote {border-left:2pt solid #ad98c4;margin:4mm 0;padding:1mm 4mm;background:#faf8fc}
+table {width:100%;border-collapse:collapse;font-size:9.5pt;margin:4mm 0;table-layout:fixed}
+th,td {border:0.6pt solid #d8cee4;padding:2.5mm;vertical-align:top;overflow-wrap:anywhere}
+th {background:#eee7f5;font-weight:600}tr {break-inside:avoid}
+.filename {font-size:9pt;color:#655873;overflow-wrap:anywhere}
+hr {border:0;border-top:0.6pt solid #ddd3e7;margin:6mm 0}
+.cover {padding-top:22mm}.cover h1 {font-size:38pt;margin-top:12mm}.cover h2 {font-size:22pt}.eyebrow{font-size:10pt;letter-spacing:1pt;color:#765596}.cover-note {margin-top:18mm;border-top:2pt solid #8b6bae;padding-top:7mm;font-size:15pt}.edition {margin-top:16mm;font-size:9pt;color:#655873}
+.toc-item {display:block;padding:2.1mm 10mm 2.1mm 0;position:relative;font-size:10.5pt;line-height:1.5;border-bottom:0.5pt solid #eee8f3;break-inside:avoid}
+.toc-item::after {content:target-counter(attr(href),page);position:absolute;right:0;top:2.1mm}
+.toc-item.major {font-weight:600;margin-top:3mm;color:#4c2875}.toc-item.sub {padding-left:5mm}.legacy-anchor{display:none}

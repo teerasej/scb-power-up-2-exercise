@@ -1,0 +1,1 @@
+Required brief style selected by the user: Concise or Detailed. Ask the user to choose if no style was supplied. Do not invent a default.

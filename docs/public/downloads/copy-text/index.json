@@ -1,0 +1,495 @@
+{
+  "source_revision": "4366fecc57200346a7420d8594742874ef883502",
+  "blocks": [
+    {
+      "file": "01-instructions-practice-1-01.txt",
+      "route": "exercises/01-instructions",
+      "practice": "practice-1",
+      "heading": "Practice 1: สร้าง Agent ของเรา",
+      "sha256": "e40f72a9cb8060c124e9e5befc74c63cc37164aac21f4130dd9f70348850e373"
+    },
+    {
+      "file": "01-instructions-practice-1-02.txt",
+      "route": "exercises/01-instructions",
+      "practice": "practice-1",
+      "heading": "Practice 1: สร้าง Agent ของเรา",
+      "sha256": "fac3b70eabfa5bf8a8fa2bb27d833f0b66ae972fa7ad63ed059d618f4feb41aa"
+    },
+    {
+      "file": "01-instructions-practice-2-01.txt",
+      "route": "exercises/01-instructions",
+      "practice": "practice-2",
+      "heading": "Practice 2: ทดลองกำหนดภาษาของคำตอบ",
+      "sha256": "355a21932165578ecd0ac5cc498e5642a7fdaad7d6b8789aded6cc50b8a783c8"
+    },
+    {
+      "file": "01-instructions-practice-2-02.txt",
+      "route": "exercises/01-instructions",
+      "practice": "practice-2",
+      "heading": "Practice 2: ทดลองกำหนดภาษาของคำตอบ",
+      "sha256": "35b5ab462b9195fe3b8c595be198368f82124646189662a0ebad0ae4fd7c134e"
+    },
+    {
+      "file": "01-instructions-practice-2-03.txt",
+      "route": "exercises/01-instructions",
+      "practice": "practice-2",
+      "heading": "Practice 2: ทดลองกำหนดภาษาของคำตอบ",
+      "sha256": "355a21932165578ecd0ac5cc498e5642a7fdaad7d6b8789aded6cc50b8a783c8"
+    },
+    {
+      "file": "01-instructions-practice-3-01.txt",
+      "route": "exercises/01-instructions",
+      "practice": "practice-3",
+      "heading": "Practice 3: กำหนดบทบาทและเก็บคำตอบตั้งต้น",
+      "sha256": "5fac5f88a8cd99ac45fd0100d239d2faa75f26a700ad91f79764f1822f30cc70"
+    },
+    {
+      "file": "01-instructions-practice-3-02.txt",
+      "route": "exercises/01-instructions",
+      "practice": "practice-3",
+      "heading": "Practice 3: กำหนดบทบาทและเก็บคำตอบตั้งต้น",
+      "sha256": "32051837cb078ac852b280fbde2b2a7eadaea7fefe6a3affc744214ed0c43bcd"
+    },
+    {
+      "file": "01-instructions-practice-4-01.txt",
+      "route": "exercises/01-instructions",
+      "practice": "practice-4",
+      "heading": "Practice 4: กำหนดรูปแบบของสรุป",
+      "sha256": "1d421705756302bf996a9319bc211a6568b57bef9f08eb12864db1d77a91ee73"
+    },
+    {
+      "file": "01-instructions-practice-4-02.txt",
+      "route": "exercises/01-instructions",
+      "practice": "practice-4",
+      "heading": "Practice 4: กำหนดรูปแบบของสรุป",
+      "sha256": "32051837cb078ac852b280fbde2b2a7eadaea7fefe6a3affc744214ed0c43bcd"
+    },
+    {
+      "file": "01-instructions-practice-5-01.txt",
+      "route": "exercises/01-instructions",
+      "practice": "practice-5",
+      "heading": "Practice 5: การรับมือกับคำถามที่ไม่มีข้อมูลในการตอบ",
+      "sha256": "41d03a6ab279aacbd8a6e6bf7940d058b6079e0da9c159963eeb2c39e0e3ab02"
+    },
+    {
+      "file": "01-instructions-practice-5-02.txt",
+      "route": "exercises/01-instructions",
+      "practice": "practice-5",
+      "heading": "Practice 5: การรับมือกับคำถามที่ไม่มีข้อมูลในการตอบ",
+      "sha256": "32051837cb078ac852b280fbde2b2a7eadaea7fefe6a3affc744214ed0c43bcd"
+    },
+    {
+      "file": "01-instructions-practice-6-01.txt",
+      "route": "exercises/01-instructions",
+      "practice": "practice-6",
+      "heading": "Practice 6: กำหนดขอบเขตและเปรียบเทียบผล",
+      "sha256": "9e178c12b98a17cca910108da4ea37535bd9055ab1e7c5dc9c6d0dc2f7995349"
+    },
+    {
+      "file": "01-instructions-practice-6-02.txt",
+      "route": "exercises/01-instructions",
+      "practice": "practice-6",
+      "heading": "Practice 6: กำหนดขอบเขตและเปรียบเทียบผล",
+      "sha256": "32051837cb078ac852b280fbde2b2a7eadaea7fefe6a3affc744214ed0c43bcd"
+    },
+    {
+      "file": "01-instructions-practice-6-03.txt",
+      "route": "exercises/01-instructions",
+      "practice": "practice-6",
+      "heading": "Practice 6: กำหนดขอบเขตและเปรียบเทียบผล",
+      "sha256": "83de9583c16d467c871c39ca2b368b833870dc574864b50e1cfcdbf3357d7318"
+    },
+    {
+      "file": "02-knowledge-practice-1-01.txt",
+      "route": "exercises/02-knowledge",
+      "practice": "practice-1",
+      "heading": "Practice 1: ขยายขอบเขต Instructions ให้ค้นคู่มือได้",
+      "sha256": "47eef6a3f3aaf48c19cd6b96412f24ae8d0d660d93e0a61b19fd3d719be5f95d"
+    },
+    {
+      "file": "02-knowledge-practice-1-02.txt",
+      "route": "exercises/02-knowledge",
+      "practice": "practice-1",
+      "heading": "Practice 1: ขยายขอบเขต Instructions ให้ค้นคู่มือได้",
+      "sha256": "cc59fa9c496872cf87e250f6aac341c1a56fe58df095262e8d6121d634c2cefe"
+    },
+    {
+      "file": "02-knowledge-practice-2-01.txt",
+      "route": "exercises/02-knowledge",
+      "practice": "practice-2",
+      "heading": "Practice 2: เพิ่มแฟ้ม Knowledge",
+      "sha256": "ef844ffce569c3884f2cfe60f00f5c9753df22242fe2fb0202760597ef10741b"
+    },
+    {
+      "file": "02-knowledge-practice-2-02.txt",
+      "route": "exercises/02-knowledge",
+      "practice": "practice-2",
+      "heading": "Practice 2: เพิ่มแฟ้ม Knowledge",
+      "sha256": "376b0fb6fc0a0f8de72f6fd886d3db205132caa02b37e2d3c2036cb3790399e0"
+    },
+    {
+      "file": "02-knowledge-practice-2-03.txt",
+      "route": "exercises/02-knowledge",
+      "practice": "practice-2",
+      "heading": "Practice 2: เพิ่มแฟ้ม Knowledge",
+      "sha256": "7eec40f09cb312a350c435fd1940a912f904ffb220b950e5b65e0bd65256fe51"
+    },
+    {
+      "file": "02-knowledge-practice-2-04.txt",
+      "route": "exercises/02-knowledge",
+      "practice": "practice-2",
+      "heading": "Practice 2: เพิ่มแฟ้ม Knowledge",
+      "sha256": "bd1686a82e7c69a5bdbb70d926fd3c94f55a830b5d73c95afe96ff69d4aeceb4"
+    },
+    {
+      "file": "02-knowledge-practice-2-05.txt",
+      "route": "exercises/02-knowledge",
+      "practice": "practice-2",
+      "heading": "Practice 2: เพิ่มแฟ้ม Knowledge",
+      "sha256": "407776ed1f1b5077d99f6d62b6b79417db2154b91354de6cd1b0cc57d2bbbef3"
+    },
+    {
+      "file": "02-knowledge-practice-2-06.txt",
+      "route": "exercises/02-knowledge",
+      "practice": "practice-2",
+      "heading": "Practice 2: เพิ่มแฟ้ม Knowledge",
+      "sha256": "68679c30a258c6a97b45e21829eacba9a1825dfecd881c4a945f28d572d24ff3"
+    },
+    {
+      "file": "02-knowledge-practice-3-01.txt",
+      "route": "exercises/02-knowledge",
+      "practice": "practice-3",
+      "heading": "Practice 3: ตรวจคำตอบกับคู่มือ",
+      "sha256": "cc59fa9c496872cf87e250f6aac341c1a56fe58df095262e8d6121d634c2cefe"
+    },
+    {
+      "file": "02-knowledge-practice-3-02.txt",
+      "route": "exercises/02-knowledge",
+      "practice": "practice-3",
+      "heading": "Practice 3: ตรวจคำตอบกับคู่มือ",
+      "sha256": "f73986a5c59329ff1a7da77066ab20489f190e0159008d60b7c9eaf9a1319e25"
+    },
+    {
+      "file": "02-knowledge-practice-4-01.txt",
+      "route": "exercises/02-knowledge",
+      "practice": "practice-4",
+      "heading": "Practice 4: ตรวจข้อมูลที่ Knowledge ไม่ได้ระบุ",
+      "sha256": "e80e2ac51c26c62294b7c7d7fd11a31951e37d6cb8e3bc1f010d845b9b34738f"
+    },
+    {
+      "file": "02-knowledge-practice-4-02.txt",
+      "route": "exercises/02-knowledge",
+      "practice": "practice-4",
+      "heading": "Practice 4: ตรวจข้อมูลที่ Knowledge ไม่ได้ระบุ",
+      "sha256": "e184a53a1860de6df33d2ad6df2c387803c1e5b1cbfe77a32937e57551b72a91"
+    },
+    {
+      "file": "03-prompt-tool-practice-1-01.txt",
+      "route": "exercises/03-prompt-tool",
+      "practice": "practice-1",
+      "heading": "Practice 1: สร้าง Prompt ที่รับข้อมูลสองช่อง",
+      "sha256": "9dd712e3ecc23fe9c302924e4d45d58a8e21c66a70fa0772a308b4df164668ef"
+    },
+    {
+      "file": "03-prompt-tool-practice-1-02.txt",
+      "route": "exercises/03-prompt-tool",
+      "practice": "practice-1",
+      "heading": "Practice 1: สร้าง Prompt ที่รับข้อมูลสองช่อง",
+      "sha256": "69643e05ca34e5a7c4eb406cb66b5bc3d070ec15a956dfba744e6a1bcd4a9393"
+    },
+    {
+      "file": "03-prompt-tool-practice-1-03.txt",
+      "route": "exercises/03-prompt-tool",
+      "practice": "practice-1",
+      "heading": "Practice 1: สร้าง Prompt ที่รับข้อมูลสองช่อง",
+      "sha256": "9ccd5aa6cd2f54ab30f0614cc523b5dc3f9d6d8317920a56cf539a5988afd3e4"
+    },
+    {
+      "file": "03-prompt-tool-practice-1-04.txt",
+      "route": "exercises/03-prompt-tool",
+      "practice": "practice-1",
+      "heading": "Practice 1: สร้าง Prompt ที่รับข้อมูลสองช่อง",
+      "sha256": "ad68a2dc18fdf6d0540ac3177454f50059efee5a041b708c781d15bf1bb70265"
+    },
+    {
+      "file": "03-prompt-tool-practice-1-05.txt",
+      "route": "exercises/03-prompt-tool",
+      "practice": "practice-1",
+      "heading": "Practice 1: สร้าง Prompt ที่รับข้อมูลสองช่อง",
+      "sha256": "7f50fe31aefb0974ebe4e6d5e49c52efd2ca92829ababc0c32b80476f8c64088"
+    },
+    {
+      "file": "03-prompt-tool-practice-1-06.txt",
+      "route": "exercises/03-prompt-tool",
+      "practice": "practice-1",
+      "heading": "Practice 1: สร้าง Prompt ที่รับข้อมูลสองช่อง",
+      "sha256": "12ad2ecd13c55748a703f819f03b7e709badbdc56ee56b8afbff52a2defeb6b6"
+    },
+    {
+      "file": "03-prompt-tool-practice-1-07.txt",
+      "route": "exercises/03-prompt-tool",
+      "practice": "practice-1",
+      "heading": "Practice 1: สร้าง Prompt ที่รับข้อมูลสองช่อง",
+      "sha256": "d23235551302321b28e17dbdcdfd1a733e5a1ba5fd05a98d623cc017a8cae21b"
+    },
+    {
+      "file": "03-prompt-tool-practice-2-01.txt",
+      "route": "exercises/03-prompt-tool",
+      "practice": "practice-2",
+      "heading": "Practice 2: ให้ input รู้จัก BriefStyle entity",
+      "sha256": "9ccd5aa6cd2f54ab30f0614cc523b5dc3f9d6d8317920a56cf539a5988afd3e4"
+    },
+    {
+      "file": "03-prompt-tool-practice-2-02.txt",
+      "route": "exercises/03-prompt-tool",
+      "practice": "practice-2",
+      "heading": "Practice 2: ให้ input รู้จัก BriefStyle entity",
+      "sha256": "12ad2ecd13c55748a703f819f03b7e709badbdc56ee56b8afbff52a2defeb6b6"
+    },
+    {
+      "file": "03-prompt-tool-practice-2-03.txt",
+      "route": "exercises/03-prompt-tool",
+      "practice": "practice-2",
+      "heading": "Practice 2: ให้ input รู้จัก BriefStyle entity",
+      "sha256": "461b39e2ae755104e40198065f6442760170181c45f0a4c42e6f291280c36010"
+    },
+    {
+      "file": "03-prompt-tool-practice-2-04.txt",
+      "route": "exercises/03-prompt-tool",
+      "practice": "practice-2",
+      "heading": "Practice 2: ให้ input รู้จัก BriefStyle entity",
+      "sha256": "18173147c117f465aa54e892c5d4f3e4200fb70c19b5a8e2887fa028b2b6ea4d"
+    },
+    {
+      "file": "03-prompt-tool-practice-2-05.txt",
+      "route": "exercises/03-prompt-tool",
+      "practice": "practice-2",
+      "heading": "Practice 2: ให้ input รู้จัก BriefStyle entity",
+      "sha256": "d23235551302321b28e17dbdcdfd1a733e5a1ba5fd05a98d623cc017a8cae21b"
+    },
+    {
+      "file": "03-prompt-tool-practice-2-06.txt",
+      "route": "exercises/03-prompt-tool",
+      "practice": "practice-2",
+      "heading": "Practice 2: ให้ input รู้จัก BriefStyle entity",
+      "sha256": "94e42ae611fcbc20911f4b97777fcc4949327506cddc3ebfcc0b67c6ec08f4de"
+    },
+    {
+      "file": "03-prompt-tool-practice-2-07.txt",
+      "route": "exercises/03-prompt-tool",
+      "practice": "practice-2",
+      "heading": "Practice 2: ให้ input รู้จัก BriefStyle entity",
+      "sha256": "3f688df8a9e6242031edf6f87f04c77d07407de086238854ba894aa8daa17fe8"
+    },
+    {
+      "file": "03-prompt-tool-practice-2-08.txt",
+      "route": "exercises/03-prompt-tool",
+      "practice": "practice-2",
+      "heading": "Practice 2: ให้ input รู้จัก BriefStyle entity",
+      "sha256": "2ce8e126d49a8d122a2132991aecd8fa7e1cf5ce2b46578efee05e27a8c25a39"
+    },
+    {
+      "file": "03-prompt-tool-practice-2-09.txt",
+      "route": "exercises/03-prompt-tool",
+      "practice": "practice-2",
+      "heading": "Practice 2: ให้ input รู้จัก BriefStyle entity",
+      "sha256": "758ac9ea1e613c776c685b8069e84cfd878353a65651119a75375379f24c2f9c"
+    },
+    {
+      "file": "03-prompt-tool-practice-2-10.txt",
+      "route": "exercises/03-prompt-tool",
+      "practice": "practice-2",
+      "heading": "Practice 2: ให้ input รู้จัก BriefStyle entity",
+      "sha256": "e606eb922635d9af082c1d98c36195aa175dc9498c47315a9f8cb65e0119a9be"
+    },
+    {
+      "file": "03-prompt-tool-practice-3-01.txt",
+      "route": "exercises/03-prompt-tool",
+      "practice": "practice-3",
+      "heading": "Practice 3: ตรวจค่าที่ Agent ส่งให้ Prompt",
+      "sha256": "7204e98c5536ada41305b734c1d9f1422f258a56c07e63e5b5655bde330f4724"
+    },
+    {
+      "file": "03-prompt-tool-practice-3-02.txt",
+      "route": "exercises/03-prompt-tool",
+      "practice": "practice-3",
+      "heading": "Practice 3: ตรวจค่าที่ Agent ส่งให้ Prompt",
+      "sha256": "b2d34592eecb8534fb73c8c50acc53afca5a770cd4023374f22b1caf4a14a126"
+    },
+    {
+      "file": "03-prompt-tool-practice-3-03.txt",
+      "route": "exercises/03-prompt-tool",
+      "practice": "practice-3",
+      "heading": "Practice 3: ตรวจค่าที่ Agent ส่งให้ Prompt",
+      "sha256": "a7aa1b0acde122c4fd77224b8cd41f73fd3dfb393e36f13a37d1f0d38882cfc1"
+    },
+    {
+      "file": "04-agent-flow-intro-01.txt",
+      "route": "exercises/04-agent-flow",
+      "practice": "intro",
+      "heading": "Scenario 1: ส่งสรุปที่ตรวจแล้วไปยัง inbox ทดสอบ",
+      "sha256": "2853b55f3d9442f75b2d4ff108d40d1b2d81e4643ba2826bb7793963d4b6eeb8"
+    },
+    {
+      "file": "04-agent-flow-practice-1-01.txt",
+      "route": "exercises/04-agent-flow",
+      "practice": "practice-1",
+      "heading": "Steps",
+      "sha256": "5e016c7c61724b08e510994c998f65f4774f8a2f9037437d0db04935fab97a1d"
+    },
+    {
+      "file": "04-agent-flow-practice-1-02.txt",
+      "route": "exercises/04-agent-flow",
+      "practice": "practice-1",
+      "heading": "Steps",
+      "sha256": "c932d3f44e40ee31a371ea396923e91d84a58ae91f984f24654fa15adc85e1a2"
+    },
+    {
+      "file": "04-agent-flow-practice-1-03.txt",
+      "route": "exercises/04-agent-flow",
+      "practice": "practice-1",
+      "heading": "Steps",
+      "sha256": "9e4d6f1afcb3b4acbb5014360f35c04c59f8ee657e355f6fbe22cf336c1fa32c"
+    },
+    {
+      "file": "04-agent-flow-practice-2-01.txt",
+      "route": "exercises/04-agent-flow",
+      "practice": "practice-2",
+      "heading": "Steps",
+      "sha256": "2f293b450efba79fd6fa49413287a13da06fc017f8a6cadd331d369065eca344"
+    },
+    {
+      "file": "04-agent-flow-practice-3-01.txt",
+      "route": "exercises/04-agent-flow",
+      "practice": "practice-3",
+      "heading": "Steps",
+      "sha256": "3fc2790058580bd30200e8f63fe873ae2b1c83babc93621c5f6bf5ed073a3b51"
+    },
+    {
+      "file": "04-agent-flow-practice-3-02.txt",
+      "route": "exercises/04-agent-flow",
+      "practice": "practice-3",
+      "heading": "Steps",
+      "sha256": "e770d57ebb1f42ed06209dea8e7e05e2a5c3a90fc713f5e7cb29a02121cd2755"
+    },
+    {
+      "file": "04-agent-flow-practice-4-01.txt",
+      "route": "exercises/04-agent-flow",
+      "practice": "practice-4",
+      "heading": "Steps",
+      "sha256": "3c5c9244195c3b7b08516c700c14e65975022af4a0956bb68f15cad5d354d20e"
+    },
+    {
+      "file": "04-agent-flow-practice-5-01.txt",
+      "route": "exercises/04-agent-flow",
+      "practice": "practice-5",
+      "heading": "Steps",
+      "sha256": "791788d8e694a6d7b1bf22d1b83df8ededbd22b78b52ff7fd928ff42513f706c"
+    },
+    {
+      "file": "04-agent-flow-practice-5-02.txt",
+      "route": "exercises/04-agent-flow",
+      "practice": "practice-5",
+      "heading": "Steps",
+      "sha256": "403601a6dd83139fd2b1af4be0adb09265f8f75e1e8c8ad26fb77357183efbd6"
+    },
+    {
+      "file": "04-agent-flow-practice-5-03.txt",
+      "route": "exercises/04-agent-flow",
+      "practice": "practice-5",
+      "heading": "Steps",
+      "sha256": "3f5b0aac4a019b1000cbc9f1edc7c354e2263333c77fce1937ae7962e67be1ea"
+    },
+    {
+      "file": "04-agent-flow-practice-6-01.txt",
+      "route": "exercises/04-agent-flow",
+      "practice": "practice-6",
+      "heading": "Steps",
+      "sha256": "db44463bdd3e46c5d49871c5d093622048391fe43bbea5b12b48a3f40eaf1196"
+    },
+    {
+      "file": "04-agent-flow-practice-7-01.txt",
+      "route": "exercises/04-agent-flow",
+      "practice": "practice-7",
+      "heading": "Steps",
+      "sha256": "c1bbc16977704ed32c003ec68940f9b98cc8187f2393c1371a158a6ce74685a0"
+    },
+    {
+      "file": "04-agent-flow-practice-7-02.txt",
+      "route": "exercises/04-agent-flow",
+      "practice": "practice-7",
+      "heading": "Steps",
+      "sha256": "3aafd2a90daae133a8a1bd233361a874cab15ca60a7342960f75432929bac7ca"
+    },
+    {
+      "file": "05-topics-practice-1-01.txt",
+      "route": "exercises/05-topics",
+      "practice": "practice-1",
+      "heading": "Practice 1: สร้างคำถามและคำแนะนำสองเส้นทาง",
+      "sha256": "c9793681d3488a9de17f8e4bb6afb19a37753f629e23765d31b90788aff00dc7"
+    },
+    {
+      "file": "05-topics-practice-1-02.txt",
+      "route": "exercises/05-topics",
+      "practice": "practice-1",
+      "heading": "Practice 1: สร้างคำถามและคำแนะนำสองเส้นทาง",
+      "sha256": "5fcdd0382b07f3845f354338a6c159553a440e026072d410dd335068b9784d3b"
+    },
+    {
+      "file": "05-topics-practice-1-03.txt",
+      "route": "exercises/05-topics",
+      "practice": "practice-1",
+      "heading": "Practice 1: สร้างคำถามและคำแนะนำสองเส้นทาง",
+      "sha256": "1011ab2e7e267b38403fdd648bb8d8ccebeb64ecdb1f2293f96ba9433bfd6176"
+    },
+    {
+      "file": "05-topics-practice-1-04.txt",
+      "route": "exercises/05-topics",
+      "practice": "practice-1",
+      "heading": "Practice 1: สร้างคำถามและคำแนะนำสองเส้นทาง",
+      "sha256": "2fbfcc34a684efbe87ed0854b229d05e4711cafb64cf562380cd8bcfaf637438"
+    },
+    {
+      "file": "05-topics-practice-1-05.txt",
+      "route": "exercises/05-topics",
+      "practice": "practice-1",
+      "heading": "Practice 1: สร้างคำถามและคำแนะนำสองเส้นทาง",
+      "sha256": "89aa45e9fdf4d1be8892de9cda4ed367fc527b84b515cd26ae4d82da2a737f23"
+    },
+    {
+      "file": "05-topics-practice-1-06.txt",
+      "route": "exercises/05-topics",
+      "practice": "practice-1",
+      "heading": "Practice 1: สร้างคำถามและคำแนะนำสองเส้นทาง",
+      "sha256": "5fdabafa3cf000dcbc0d136325f33b377eb4abd116bf376a9b6806e1d8859306"
+    },
+    {
+      "file": "05-topics-practice-1-07.txt",
+      "route": "exercises/05-topics",
+      "practice": "practice-1",
+      "heading": "Practice 1: สร้างคำถามและคำแนะนำสองเส้นทาง",
+      "sha256": "49aa507bb63fe710d971cf08503be9706f9505eacd42c161365c0228c0d779c9"
+    },
+    {
+      "file": "05-topics-practice-1-08.txt",
+      "route": "exercises/05-topics",
+      "practice": "practice-1",
+      "heading": "Practice 1: สร้างคำถามและคำแนะนำสองเส้นทาง",
+      "sha256": "bbac4723db6ba38714d2a5be85e7135d02491b13423f101a3b13a4927099db65"
+    },
+    {
+      "file": "05-topics-practice-1-09.txt",
+      "route": "exercises/05-topics",
+      "practice": "practice-1",
+      "heading": "Practice 1: สร้างคำถามและคำแนะนำสองเส้นทาง",
+      "sha256": "f3067facbdbd11c402ecfada3f6b1860ac3bdeabc66fe923190c4a62166c2f3e"
+    },
+    {
+      "file": "05-topics-practice-1-10.txt",
+      "route": "exercises/05-topics",
+      "practice": "practice-1",
+      "heading": "Practice 1: สร้างคำถามและคำแนะนำสองเส้นทาง",
+      "sha256": "f3067facbdbd11c402ecfada3f6b1860ac3bdeabc66fe923190c4a62166c2f3e"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+## Sending a reviewed brief
+- Use Send Reviewed Training Brief only when the user confirms that the email body has been reviewed, explicitly requests sending, and provides the approved test inbox.
+- If the recipient is missing, the body is empty, or review has not been confirmed, ask for the missing information first.
+- If the tool fails or returns no result, explain that sending is not confirmed. Ask the user to check Run history and the inbox before trying again.

@@ -1,0 +1,1 @@
+Sends reviewed email content to a test inbox. Use only when the user explicitly confirms sending and provides the recipient. Do not use for drafting or revising content.
