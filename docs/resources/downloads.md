@@ -12,7 +12,7 @@ next: false
 
 <DownloadFile file="power-up-2-sample-files.zip">ดาวน์โหลดไฟล์ฝึกทั้งหมด (ZIP)</DownloadFile>
 
-ZIP รวมไฟล์ฝึก แบบบันทึก และสไลด์ PDF ทั้ง 15 ไฟล์ที่แสดงด้านล่าง แตกไฟล์ก่อนเริ่มใช้งาน และคงชื่อไฟล์เดิมไว้
+ZIP รวมไฟล์ฝึก แบบบันทึก และสไลด์ PDF ทั้ง 13 ไฟล์ที่แสดงด้านล่าง แตกไฟล์ก่อนเริ่มใช้งาน และคงชื่อไฟล์เดิมไว้
 
 ## สไลด์ประกอบการเรียน
 
@@ -44,9 +44,7 @@ ZIP รวมไฟล์ฝึก แบบบันทึก และสไ�
 
 | ไฟล์ | การใช้งาน |
 |---|---|
-| <DownloadFile file="test-log.xlsx">Use case test log XLSX</DownloadFile> | ตัวอย่างเสริมสำหรับบันทึก Scenario, Starter Prompts และผลของ use case ของทีม ไม่ต้องกรอกระหว่าง Exercise |
-| <DownloadFile file="gap-list.csv">Gap list CSV</DownloadFile> | บันทึกสิ่งที่ต้องแก้ ผู้รับผิดชอบ และวิธี retest |
-| <DownloadFile file="readiness-worksheet.md">Readiness worksheet Markdown</DownloadFile> | [อ่านบนเว็บไซต์](/resources/readiness-worksheet) |
+| <DownloadFile file="test-log.xlsx">Use case test log XLSX</DownloadFile> | ตัวอย่างเสริมสำหรับบันทึก Scenario, Starter Prompts และผลของ use case ของทีม ไม่ต้องกรอกระหว่าง Exercise · [ดูตัวอย่างการใช้งาน](/resources/test-log) |
 | <DownloadFile file="demo-run-sheet.md">Demo run sheet Markdown</DownloadFile> | [อ่านบนเว็บไซต์](/resources/demo-run-sheet) |
 
 หาก browser แสดงเนื้อหา TXT/CSV/Markdown ให้ใช้คำสั่ง Save หรือ Download ของ browser เพื่อเก็บไฟล์ โดยคงนามสกุลเดิม ไฟล์ XLSX ให้เปิดด้วย Excel หรือแอปที่รองรับรูปแบบนี้

@@ -252,7 +252,7 @@ Prompt รับ input  2 ตัว และสร้าง body ได้ท�
 
 11. ตรวจ input และผลลัพธ์เทียบกับต้นฉบับ ทั้งสองแบบต้องไม่แต่งวันที่ยื่น ผลตรวจระบบ หรือกำหนดเสร็จ
 12. เลือก body ฉบับที่ต้องการ ตรวจข้อเท็จจริงแล้วเก็บในโน้ตส่วนตัว แยก body ออกจากบทสนทนาและคำอธิบายของ Agent
-13. เทียบ Instructions ปัจจุบันกับ <DownloadFile file="agent-3-instructions.txt">snapshot หลัง Exercise 3</DownloadFile> เก็บผลที่ยังไม่ผ่านใน <DownloadFile file="gap-list.csv">Gap list</DownloadFile>
+13. เทียบ Instructions ปัจจุบันกับ <DownloadFile file="agent-3-instructions.txt">snapshot หลัง Exercise 3</DownloadFile>
 
 ### Checkpoint
 

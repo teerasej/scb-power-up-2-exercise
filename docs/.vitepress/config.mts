@@ -29,7 +29,7 @@ export default defineConfig({
       { text: 'สร้าง Agent ทีละขั้น', items: exercises.map(([slug, text]) => ({ text, link: `/exercises/${slug}` })) },
       { text: 'ไฟล์และหลักฐาน', items: [
         { text: 'ดาวน์โหลดไฟล์ฝึก', link: '/resources/downloads' },
-        { text: 'Readiness worksheet', link: '/resources/readiness-worksheet' },
+        { text: 'ทดลองบันทึกผลด้วย Test log', link: '/resources/test-log' },
         { text: 'Demo run sheet', link: '/resources/demo-run-sheet' },
       ] },
     ],

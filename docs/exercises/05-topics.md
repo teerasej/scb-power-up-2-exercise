@@ -1,7 +1,7 @@
 ---
 description: "Exercise 5: Topics — รู้จักบทสนทนาแบบเลือกเส้นทาง"
 prev: {"text": "Exercise 4: Agent flow", "link": "/exercises/04-agent-flow"}
-next: {"text": "ทบทวนหลักฐานและ gap", "link": "/resources/readiness-worksheet"}
+next: {"text": "ทดลองบันทึกผลด้วย Test log", "link": "/resources/test-log"}
 ---
 
 # Exercise 5: Topics — รู้จักบทสนทนาแบบเลือกเส้นทาง
@@ -31,10 +31,10 @@ next: {"text": "ทบทวนหลักฐานและ gap", "link": "/re
    Review Readiness
    ```
 
-3. ที่ Trigger แบบ `The agent chooses` ใส่คำอธิบายว่า Topic นี้ใช้เมื่อใด หากเป็น `User says a phrase` ให้ใช้ข้อความทดสอบในขั้น 7 เป็น trigger phrase โดยให้ผู้สอนช่วยตรวจตาม UI ที่ปรากฏ
+3. ที่ Trigger แบบ `The agent chooses` ใส่คำอธิบายว่า Topic จะถูก agent เรียกใช้ในกรณีไหนบ้าง
 
    ```text
-   Use when the user wants to check whether the CASE-201 brief is ready. Ask whether the facts have been reviewed, then provide guidance based on the answer. This topic does not send email or call a flow.
+   Use when the user wants to check whether the brief is ready. Ask whether the facts have been reviewed, then provide guidance based on the answer. This topic does not send email or call a flow.
    ```
 
 4. ใต้ Trigger เพิ่ม `Ask a question` node แล้ววางคำถาม
@@ -77,7 +77,7 @@ next: {"text": "ทบทวนหลักฐานและ gap", "link": "/re
 
    ```text
    ## Review readiness guideline
-   - Use the Review Readiness topic when the user asks to check whether the CASE-201 brief is ready. This check must not send email or call the sending flow.
+   - Use the Review Readiness topic when the user asks to check whether the brief is ready. This check must not send email or call the sending flow.
    ```
 
    แทนชื่อ `Review Readiness` ในข้อความด้วยการอ้างอิง Topic จริง โดยลบเฉพาะชื่อ วางเคอร์เซอร์ที่เดิม แล้วกด `+ Add` เพื่อเลือก Topic `Review Readiness` จากนั้นกด `Save`
@@ -103,8 +103,5 @@ next: {"text": "ทบทวนหลักฐานและ gap", "link": "/re
 
 Topic ช่วยกำหนดเส้นทางบทสนทนา ส่วน flow จาก Exercise 4 เป็นเครื่องมือทำงานที่เราได้ทดสอบด้วยตนเอง การเลือกคำตอบใน Topic นี้ไม่ได้เรียก flow และไม่ได้รับรองว่าเนื้อหาผ่านการตรวจจริง
 
-Topics และ Question nodes ในกิจกรรมนี้อยู่ใน **standard harness** ส่วน **GitHub Copilot harness** มีวิธีสร้างและควบคุม Agent ต่างออกไป ไม่ต้องสร้าง Topic นี้ซ้ำใน harness นั้น ผู้สอนจะเปรียบเทียบให้ดูใน demonstration ตาม [Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/overview)
 
-หากต้องเทียบสถานะ Instructions ใช้ <DownloadFile file="agent-5-instructions.txt">Instructions หลัง Exercise 5</DownloadFile> ไฟล์นี้เป็นจุดเทียบข้อความ ไม่ได้สร้าง Topic ให้โดยอัตโนมัติ
-
-[กลับสารบัญ](/) | [ทบทวนหลักฐานและ gap](/resources/readiness-worksheet.md)
+[กลับสารบัญ](/) | [ทดลองบันทึกผลด้วย Test log](/resources/test-log)

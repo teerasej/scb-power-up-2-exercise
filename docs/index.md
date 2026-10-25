@@ -42,6 +42,6 @@ features:
 
 ## ตรวจเช็คว่าพร้อมหรือไม่
 
-ใช้ [Readiness worksheet](/resources/readiness-worksheet), <DownloadFile file="gap-list.csv">Gap list</DownloadFile> และ [Demo run sheet](/resources/demo-run-sheet) ทบทวนผลจริงและเตรียมนำเสนอ ข้อมูลฝึกทั้งหมดเป็นข้อมูลสมมติ ไม่ใช่นโยบายหรือข้อมูลลูกค้าจริง
+ลอง [บันทึกผลด้วย Test log](/resources/test-log) จากตัวอย่างหนึ่งสถานการณ์ แล้วใช้ [Demo run sheet](/resources/demo-run-sheet) เตรียมนำเสนอ ข้อมูลฝึกทั้งหมดเป็นข้อมูลสมมติ ไม่ใช่นโยบายหรือข้อมูลลูกค้าจริง
 
 การเปิดเว็บไซต์ได้ยังไม่ยืนยันว่า Environment พร้อมฝึก ตรวจ [สิ่งที่ต้องเตรียม](/prerequisites) กับผู้สอนก่อนเริ่ม
