@@ -23,11 +23,11 @@ Repository: https://github.com/teerasej/scb-power-up-2-exercise
 
 ## Content boundaries
 
-The site carries the approved five-exercise learner guide, 14 synthetic practice files and evidence templates. The original teaching pack remains a separate source snapshot. Future website edits belong here; there is no automatic two-way synchronization.
+The site carries the approved five-exercise learner guide and 15 downloads, including synthetic practice files, optional planning templates and the approved presentation PDF. The original teaching pack remains a separate source snapshot. Future website edits belong here; there is no automatic two-way synchronization.
 
-Do not place instructor notes, credentials, tenant addresses, private source references, participant records, old archives or presentations anywhere in this directory. Repository contents outside navigation can become public too. No organization logo or repository/edit buttons are used.
+Do not place instructor notes, credentials, tenant addresses, private source references, participant records, old archives or editable presentations anywhere in this directory. Only the approved presentation PDF is included. Repository contents outside navigation can become public too. No organization logo or repository/edit buttons are used.
 
-Learner access, capacity, Outlook connections for Exercise 4, and live exercise rehearsal still require instructor preparation. Exercise 5 creates Review Readiness from blank without a starter, flow call or email. The website does not contain an importable solution. All 18 test cases start at `Not run`; site verification is not tenant or classroom readiness.
+Learner access, capacity, Outlook connections for Exercise 4, and live exercise rehearsal still require instructor preparation. Exercise 5 creates Review Readiness from blank without a starter, flow call or email. The website does not contain an importable solution. Site verification is not tenant or classroom readiness.
 
 ## Toolchain notes
 
@@ -37,7 +37,7 @@ The command wrapper uses a temporary copy if the workspace path contains `#`, wh
 
 ## Local verification
 
-Production build, source-content checks, local HTTP route/asset checks, and desktop/mobile browser inspection passed on 15 October 2026. The site contains 10 content pages plus a generated 404 page and 14 downloadable learner files. Search, code copying, downloads and the Exercise 4 flow diagram are part of release checks. Exercise 5 now has one Question, two choices and two Messages; its earlier integration diagram was removed. The publication workflow and current deployment status are available in GitHub Actions.
+The site contains 10 content pages plus a generated 404 page and 15 downloadable learner files. Release checks include the production build, page/asset links, desktop/mobile layouts, Thai text, search, code copying, downloads and the Exercise 4 flow diagram. The publication workflow and current deployment status are available in GitHub Actions.
 
 ## SCB visual theme
 
@@ -47,8 +47,8 @@ Optimized responsive artwork is in `docs/public/images/`. The custom home hero r
 
 ## Combined sample download
 
-The hero’s second button directly downloads `docs/public/downloads/power-up-2-sample-files.zip`. It contains all 14 current sample files and templates, with the same bytes as the individual downloads. `npm run docs:build` regenerates and verifies this ZIP before building; use `npm run samples:zip` to refresh it independently. The explicit file list in `scripts/package-samples.py` excludes old archives, illustrations and instructor material.
+The hero’s second button directly downloads `docs/public/downloads/power-up-2-sample-files.zip`; its third button downloads `SCB-Power-Up-2-by-teerasej-v2.pdf`. The ZIP contains all 15 current files, including the presentation PDF, with the same bytes as the individual downloads. `npm run docs:build` regenerates and verifies this ZIP before building; use `npm run samples:zip` to refresh it independently. The explicit file list in `scripts/package-samples.py` excludes old archives, standalone illustrations, editable presentations and instructor material.
 
 ## Practice illustrations
 
-All 22 Practice headings across the five exercises and readiness worksheet have distinct generated illustrations. `PracticeIllustration` uses a public asset mapping for Thai alternative text, actual dimensions and base-aware responsive WebP URLs. Images preserve the complete scene proportionally. Keep original generation files and provenance outside this repository. The text-only worksheet download and sample ZIP do not include artwork.
+All 23 Practice headings across the five exercises and readiness worksheet have distinct generated illustrations. `PracticeIllustration` uses a public asset mapping for Thai alternative text, actual dimensions and base-aware responsive WebP URLs. Images preserve the complete scene proportionally. Keep original generation files and provenance outside this repository. The text-only worksheet and sample ZIP exclude standalone artwork; the approved presentation PDF retains its embedded slide artwork.

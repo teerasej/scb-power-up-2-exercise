@@ -13,13 +13,17 @@ courseHero:
       text: ดาวน์โหลดไฟล์ฝึก (ZIP)
       link: /downloads/power-up-2-sample-files.zip
       download: power-up-2-sample-files.zip
+    - theme: alt
+      text: ดาวน์โหลดสไลด์ (PDF)
+      link: /downloads/SCB-Power-Up-2-by-teerasej-v2.pdf
+      download: SCB-Power-Up-2-by-teerasej-v2.pdf
 features:
   - title: เริ่มจากงานที่ชัดเจน
     details: ใช้ CASE-201 ซึ่งเป็นคำขอเอกสารสมมติ แล้วกำหนดขอบเขตและคู่มือให้ผู้ช่วย
   - title: ต่อเครื่องมือเข้าด้วยกัน
     details: ฝึก Prompt และ entity ทดสอบ flow แล้วรู้จัก Topic แบบหนึ่งคำถามสองตัวเลือก
   - title: ตรวจผลก่อนนำเสนอ
-    details: เก็บหลักฐานจากการทดสอบ แยกสิ่งที่ทำได้จากสิ่งที่ยังต้องแก้
+    details: สังเกตผลจากการทดสอบ แยกสิ่งที่ทำได้จากสิ่งที่ยังต้องแก้
 ---
 
 ## เส้นทางการเรียนรู้
@@ -38,6 +42,6 @@ features:
 
 ## ตรวจเช็คว่าพร้อมหรือไม่
 
-ใช้ <DownloadFile file="test-log.csv">Test log</DownloadFile>, [Readiness worksheet](/resources/readiness-worksheet), <DownloadFile file="gap-list.csv">Gap list</DownloadFile> และ [Demo run sheet](/resources/demo-run-sheet) บันทึกผลจริง ข้อมูลฝึกทั้งหมดเป็นข้อมูลสมมติ ไม่ใช่นโยบายหรือข้อมูลลูกค้าจริง
+ใช้ [Readiness worksheet](/resources/readiness-worksheet), <DownloadFile file="gap-list.csv">Gap list</DownloadFile> และ [Demo run sheet](/resources/demo-run-sheet) ทบทวนผลจริงและเตรียมนำเสนอ ข้อมูลฝึกทั้งหมดเป็นข้อมูลสมมติ ไม่ใช่นโยบายหรือข้อมูลลูกค้าจริง
 
 การเปิดเว็บไซต์ได้ยังไม่ยืนยันว่า Environment พร้อมฝึก ตรวจ [สิ่งที่ต้องเตรียม](/prerequisites) กับผู้สอนก่อนเริ่ม

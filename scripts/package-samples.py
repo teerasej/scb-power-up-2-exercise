@@ -14,10 +14,11 @@ FILES = (
     'agent-2-instructions.txt',
     'agent-3-instructions.txt',
     'agent-5-instructions.txt',
-    'test-log.csv',
+    'test-log.xlsx',
     'gap-list.csv',
     'readiness-worksheet.md',
     'demo-run-sheet.md',
+    'SCB-Power-Up-2-by-teerasej-v2.pdf',
 )
 archive = DOWNLOADS / 'power-up-2-sample-files.zip'
 for name in FILES:

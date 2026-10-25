@@ -12,7 +12,11 @@ next: false
 
 <DownloadFile file="power-up-2-sample-files.zip">ดาวน์โหลดไฟล์ฝึกทั้งหมด (ZIP)</DownloadFile>
 
-ZIP รวมไฟล์ฝึกและแบบบันทึกทั้ง 14 ไฟล์ที่แสดงด้านล่าง แตกไฟล์ก่อนเริ่มใช้งาน และคงชื่อไฟล์เดิมไว้
+ZIP รวมไฟล์ฝึก แบบบันทึก และสไลด์ PDF ทั้ง 15 ไฟล์ที่แสดงด้านล่าง แตกไฟล์ก่อนเริ่มใช้งาน และคงชื่อไฟล์เดิมไว้
+
+## สไลด์ประกอบการเรียน
+
+<DownloadFile file="SCB-Power-Up-2-by-teerasej-v2.pdf">ดาวน์โหลดสไลด์ (PDF)</DownloadFile>
 
 ## Case และ Knowledge
 
@@ -36,13 +40,13 @@ ZIP รวมไฟล์ฝึกและแบบบันทึกทั้�
 
 ชื่อไฟล์ agent-1/2/3/5 หมายถึง checkpoint ของ **Agent ตัวเดียว** ไม่ใช่ Agent คนละตัว ใช้เทียบหรือกู้ส่วนที่ขาดหลังทดลองแล้ว ไม่อัปโหลด Instructions เป็น Knowledge และไฟล์เหล่านี้ไม่ได้สร้าง components ให้โดยอัตโนมัติ
 
-## แบบบันทึกหลักฐาน
+## แบบบันทึกและเตรียม demo
 
 | ไฟล์ | การใช้งาน |
 |---|---|
-| <DownloadFile file="test-log.csv">Test log CSV</DownloadFile> | 18 กรณีทดสอบ เริ่มที่ Not run บันทึกเฉพาะผลที่ทำจริง |
+| <DownloadFile file="test-log.xlsx">Use case test log XLSX</DownloadFile> | ตัวอย่างเสริมสำหรับบันทึก Scenario, Starter Prompts และผลของ use case ของทีม ไม่ต้องกรอกระหว่าง Exercise |
 | <DownloadFile file="gap-list.csv">Gap list CSV</DownloadFile> | บันทึกสิ่งที่ต้องแก้ ผู้รับผิดชอบ และวิธี retest |
 | <DownloadFile file="readiness-worksheet.md">Readiness worksheet Markdown</DownloadFile> | [อ่านบนเว็บไซต์](/resources/readiness-worksheet) |
 | <DownloadFile file="demo-run-sheet.md">Demo run sheet Markdown</DownloadFile> | [อ่านบนเว็บไซต์](/resources/demo-run-sheet) |
 
-หาก browser แสดงเนื้อหา TXT/CSV/Markdown ให้ใช้คำสั่ง Save หรือ Download ของ browser เพื่อเก็บไฟล์ โดยคงนามสกุลเดิม
+หาก browser แสดงเนื้อหา TXT/CSV/Markdown ให้ใช้คำสั่ง Save หรือ Download ของ browser เพื่อเก็บไฟล์ โดยคงนามสกุลเดิม ไฟล์ XLSX ให้เปิดด้วย Excel หรือแอปที่รองรับรูปแบบนี้

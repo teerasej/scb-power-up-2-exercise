@@ -4,210 +4,326 @@ prev: {"text": "Exercise 3: Prompt tool", "link": "/exercises/03-prompt-tool"}
 next: {"text": "Exercise 5: Topics", "link": "/exercises/05-topics"}
 ---
 
-# Exercise 4: Agent flow — สร้างเครื่องมือส่งสรุปที่ตรวจแล้ว
+# Exercise 4: Agent flow — สร้างเครื่องมือส่งสรุปที่ตรวจแล้ว ไปทาง email
 
-<ExerciseCover image="04-agent-flow" alt="ตรวจซองสรุปและถาดปลายทางที่อนุญาตก่อนผ่านจุดส่งเอกสาร" position="60% center" />
+<ExerciseCover image="04-agent-flow" alt="เตรียมสรุปที่ตรวจแล้วเพื่อส่งไปยัง inbox ทดสอบ" position="60% center" />
 
-เรามี email body จาก Prompt ใน Exercise 3 แล้ว ต่อไปจะสร้าง flow ที่รับผู้รับกับ body และส่งไปยัง inbox ทดสอบที่กำหนด เหมือนเตรียมบริการจัดส่งที่รับซองซึ่งตรวจแล้ว ส่วน Exercise 5 จะใช้สถานการณ์เดิมเพื่อรู้จัก Topic ที่ถามสถานะการตรวจสรุปและให้คำแนะนำครับ
+เรามีเนื้อหา email จาก Prompt ใน Exercise 3 แล้ว ต่อไปจะสร้าง flow สำหรับส่งเนื้อหานี้ไปยัง inbox ทดสอบ เหมือนบริการส่งจดหมายที่รับที่อยู่ผู้รับและข้อความ แล้วแจ้งกลับเมื่อส่งสำเร็จ
 
-**ผลลัพธ์:** flow ชื่อ Send Reviewed Training Brief ที่มี input สองตัว พร้อมทดสอบด้วยตนเองใน flow designer
+**ผลลัพธ์:** flow ชื่อ Send Reviewed Training Brief ที่มี 3 node เรียงต่อกัน: รับข้อมูล → ส่ง email → ตอบกลับ Agent พร้อมเรียกใช้ผ่านบทสนทนาใน Test panel
 
-> **License:** ต้องตรวจสอบสิทธิ์ Agent flow, publishing และ capacity ใน Copilot Studio รวมถึง Office 365 Outlook connection และ Exchange Online mailbox ของบัญชีฝึก Native Agent flow ไม่ได้ต้องมี Power Automate license แยกเพียงเพราะใช้ flow แต่สิทธิ์และ capacity ที่เกี่ยวข้องต้องพร้อม
+> **License:** ต้องตรวจสอบสิทธิ์ Agent flow, publishing และ capacity ใน Copilot Studio รวมถึง Office 365 Outlook connection และ Exchange Online mailbox ของบัญชีที่ใช้
 
 ## Prerequisites
 
 - Service Request Assistant และ body ที่ review แล้วจาก Exercise 3
 - ผู้สอนกำหนด approved test inbox และอนุญาต Outlook connection สำหรับการฝึกแล้ว
-- <DownloadFile file="test-log.csv">Test log</DownloadFile> สำหรับบันทึกผลจริง
 
-> **Note:** การกด Test ใน flow designer อาจส่ง email จริง ให้ใช้เฉพาะ body ที่ตรวจแล้วและ inbox ที่ได้รับอนุญาต การทดสอบตรงนี้เป็นการสั่งทดสอบโดยผู้เรียนเอง ยังไม่ใช่เส้นทางบทสนทนาของ Agent
+> **สำคัญ:** การทดสอบทั้งใน flow designer และ Test panel ของ Agent อาจส่ง email จริง flow นี้ไม่มีขั้นตอนตรวจผู้รับหรือเนื้อหาอัตโนมัติ ผู้เรียนต้องตรวจว่าใช้ inbox ที่ผู้สอนอนุญาตและเนื้อหาที่ review แล้วก่อนทดสอบทุกครั้ง
 
 ---
 
-## Practice 1: กำหนดสิ่งที่ flow ต้องรับ
+## Scenario 1: ส่งสรุปที่ตรวจแล้วไปยัง inbox ทดสอบ
+
+เราจะสร้าง flow แบบตรงไปตรงมา โดยไม่เพิ่ม `Compose`, `Condition` หรือ branch แยกเส้นทาง
+
+```mermaid
+flowchart LR
+ A["When an agent calls the flow"] --> B["Send an email (V2)"]
+ B --> C["Respond to the agent"]
+```
+
+### Practice 1: สร้าง flow และช่องรับข้อมูล
 
 <PracticeIllustration id="ex04-p01" />
 
-**Primary target:** สร้าง flow ที่รับผู้รับและ body ได้อย่างชัดเจน
+**เป้าหมาย:** สร้าง trigger ที่มีช่องรับ email ผู้รับและเนื้อหา email
 
-1. เปิดหน้า `Flows` แล้วเลือกสร้าง `Agent flow` ใน Environment เดียวกับ Agent ไม่สร้างผ่านการเพิ่มเป็น agent-level tool
-2. ตั้งชื่อ
+#### Steps
+
+1. เลือก Environment เดียวกับ Service Request Assistant
+2. เปิดหน้า `Flows`
+3. เลือกสร้าง `Agent flow`
+4. ตั้งชื่อ flow ตามนี้
 
    ```text
    Send Reviewed Training Brief
    ```
 
-3. ตรวจว่ามี trigger `When an agent calls the flow` หากได้ trigger ชนิดอื่น ให้เปลี่ยนให้ตรงก่อนเพิ่ม Text inputs ทีละตัว
+5. ตรวจว่า node แรกเป็น trigger `When an agent calls the flow`
 
-   - **ผู้รับ**
+   หากเป็น trigger อื่น ให้เปลี่ยนเป็นชื่อนี้ก่อนทำขั้นถัดไป
 
-     ```text
-     RecipientEmail
-     ```
+6. เพิ่ม input ชนิด `Text` ใน trigger สำหรับรับ email ผู้รับ
+7. ตั้งชื่อ input แรกตามนี้
 
-   - **เนื้อหาที่ review แล้ว**
+   ```text
+   RecipientEmail
+   ```
 
-     ```text
-     EmailBody
-     ```
+8. เพิ่ม input ชนิด `Text` อีกหนึ่งช่องสำหรับรับเนื้อหา email
+9. ตั้งชื่อ input ที่สองตามนี้
 
-4. ตรวจว่าไม่มี input สำหรับ Subject หรือ Confirmation เราจะกำหนด Subject ใน send action การกด Test เป็นคำสั่งทดสอบโดยผู้เรียนหลัง review และได้รับอนุญาต
-5. หาก designer สร้าง `Respond to the agent` ตั้งต้นไว้ ให้ย้ายไปใช้เป็น success response หลัง send action ใน Practice 3 อย่าปล่อย response เพิ่มไว้นอก Condition เพราะอาจตอบก่อนทราบผลจริง
+   ```text
+   EmailBody
+   ```
 
-### Checkpoint
+10. กด `Save draft` เพื่อบันทึก flow ชั่วคราว
 
-Flow มี input สองตัวและชื่อถูกต้อง จดชื่อ flow ไว้สำหรับตรวจ Run history และหลักฐานการทดสอบ
+
+#### Checkpoint
+
+Trigger มี input ชนิด Text สองตัว ชื่อ `RecipientEmail` และ `EmailBody` ตรงตามตัวอย่าง ยังไม่ต้องเพิ่ม flow เป็นเครื่องมือในหน้า Tools ของ Agent
 
 ---
 
-## Practice 2: ตรวจปลายทางและเนื้อหาก่อนส่ง
+### Practice 2: เพิ่มขั้นตอนส่ง email
 
-<PracticeIllustration id="ex04-p02" />
+**เป้าหมาย:** นำข้อมูลจาก trigger มาใส่ใน email โดยตรง
 
-**Primary target:** บล็อกผู้รับที่ไม่ตรงกับ inbox ที่อนุญาตและ body ที่ว่าง
+#### Steps
 
-```mermaid
-flowchart LR
- A["รับ RecipientEmail และ EmailBody"] --> B{"ผ่านเงื่อนไขทั้งสามหรือไม่"}
- B -->|False| C["ตอบ Blocked โดยไม่ส่ง"]
- B -->|True| D["Send an email"]
- D -->|Succeeded| E["ตอบ Sent"]
- D -->|Failed / timed out| F["ตอบ Failed และตรวจหลักฐานก่อนลองใหม่"]
-```
+1. กดเพิ่ม action ใต้ trigger `When an agent calls the flow`
+2. ค้นหา `Office 365 Outlook`
+3. เลือก action `Send an email (V2)`
+4. เลือก Outlook connection สำหรับฝึกที่ผู้สอนอนุญาต
+5. คลิกช่อง `To`
+6. คลิกด้านขวาของช่อง `To` ที่เป็นรูปเครื่องหมายฟันเฟือง (⚙️)
+7. เลือก `Use dynamic content` (รูปสายฟ้า ⚡) เพื่อเปิดรายการ dynamic content
+8. เลือก dynamic content ชื่อ `RecipientEmail` จาก trigger
 
-1. เพิ่ม `Compose` แล้วตั้งชื่อ action
+   Dynamic content คือค่าที่ flow รับมาตอนเริ่มทำงาน ให้เลือกจากรายการ ไม่พิมพ์คำว่า `RecipientEmail` ลงไปในช่องเอง
 
-   ```text
-   ApprovedTestInbox
-   ```
-
-2. ใน Inputs ใส่ approved test inbox ที่ผู้สอนให้เป็นค่าคงที่ ตรวจว่าพิมพ์ครบ ไม่มีช่องว่าง และไม่ใช่ placeholder เก็บอีเมลนี้เฉพาะใน Environment ฝึกกับโน้ตส่วนตัว
-3. เพิ่ม `Compose` อีกตัว ตั้งชื่อ action แล้วเลือก dynamic content `EmailBody` จาก trigger เป็น Inputs
+9. กรอกหัวข้อ email ในช่อง `Subject` ตามนี้
 
    ```text
-   EmailBodyRaw
+   [TRAINING] Service escalation brief
    ```
 
-4. เพิ่ม `Condition` แบบ AND จำนวนสามแถว เลือก dynamic content จริง ไม่พิมพ์ชื่อตัวแปรลงในช่องค่า
+10. คลิกช่อง `Body`
+11. เลือก dynamic content ชื่อ `EmailBody` จาก trigger
+12. เปิด `Settings` ของ action `Send an email (V2)`
+13. ตั้ง `Retry policy` เป็น `None` หากมีตัวเลือกนี้
 
-   | แถว | ค่าซ้าย | เงื่อนไข | ค่าขวา |
-   |---|---|---|---|
-   | 1 | RecipientEmail จาก trigger | is equal to | Outputs ของ ApprovedTestInbox |
-   | 2 | Outputs ของ ApprovedTestInbox | is not equal to | เว้นว่าง |
-   | 3 | ผล Expression ในขั้นถัดไป | is equal to | Boolean false |
+    ค่านี้ช่วยไม่ให้ action ลองส่งซ้ำอัตโนมัติ
 
-5. สำหรับค่าซ้ายของแถว 3 เปิด Expression แล้ววางข้อความนี้
+#### Checkpoint
 
-   ```text
-   empty(trim(outputs('EmailBodyRaw')))
-   ```
-
-6. ค่าขวาแถว 3 ให้ใช้ Boolean ผ่าน Expression ไม่ใช้ข้อความที่มีเครื่องหมายคำพูด
-
-   ```text
-   false
-   ```
-
-7. ใน branch `False` เพิ่ม `Respond to the agent` ตั้ง Text outputs สองตัวดังนี้
-
-   - **Status**
-
-     ```text
-     Blocked
-     ```
-
-   - **ResponseMessage**
-
-     ```text
-     ยังไม่ได้ส่ง: ตรวจ inbox ทดสอบและ body ที่ review แล้ว
-     ```
-
-### Checkpoint
-
-เฉพาะ branch True ที่จะไปส่ง email ผู้รับต้องตรงค่าที่กำหนด และ body ต้องมีข้อความ การฝึกนี้ไม่เพิ่มขั้นตอนปรับตัวพิมพ์หรือช่องว่างของอีเมล ให้คัดลอก approved address ตามที่ผู้สอนกำหนด
+ใต้ trigger มี action ส่ง email เพียงตัวเดียว ช่อง `To` รับค่าจาก `RecipientEmail` และช่อง `Body` รับค่าจาก `EmailBody` โดยไม่มีขั้นตอนตรวจเงื่อนไขคั่นกลาง
 
 ---
 
-## Practice 3: ส่งข้อความและคืนผลจริง
+### Practice 3: เพิ่มข้อความตอบกลับ Agent
 
 <PracticeIllustration id="ex04-p03" />
 
-**Primary target:** ให้ flow คืนสถานะตามผลของ send action
+**เป้าหมาย:** ให้ flow ตอบกลับหลังขั้นตอนส่ง email ทำงานสำเร็จ
 
-1. ใน branch `True` เพิ่ม `Office 365 Outlook` > `Send an email (V2)` แล้วใช้ connection ฝึกที่ได้รับอนุญาต
-2. ตั้งช่องต่าง ๆ ดังนี้
+#### Steps
 
-   - **To:** เลือก Outputs ของ `ApprovedTestInbox` ไม่ใช้ค่าที่โมเดลเสนอโดยตรง
-   - **Subject:** กรอกค่าคงที่นี้
+1. เพิ่ม `Respond to the agent` ใต้ action `Send an email (V2)`
 
-     ```text
-     [TRAINING] Service escalation brief
-     ```
+   หากมี node นี้อยู่แล้ว ให้ใช้ node เดิมเป็นขั้นตอนสุดท้าย ไม่ต้องเพิ่มซ้ำ
 
-   - **Body:** เลือก dynamic content `EmailBody` จาก trigger เพื่อส่งฉบับเดิมที่ตรวจแล้ว ไม่ใช้ค่าที่ถูก trim แทน
+2. เพิ่ม output ชนิด `Text` ใน `Respond to the agent`
+3. ตั้งชื่อ output แรกว่า `Status`
+4. ใส่ค่าของ `Status` ตามนี้
 
-3. เปิด Settings ของ send action ตั้ง `Retry policy` เป็น `None` หากมีตัวเลือกนี้ ผู้สอนช่วยยืนยันค่าจริง
-4. ใต้ send action เพิ่ม `Respond to the agent` หรือใช้ response ตั้งต้นที่ย้ายมา ให้ทำงานเมื่อ send succeeded ตั้ง Text outputs ชื่อ `Status` และ `ResponseMessage`
+   ```text
+   Sent
+   ```
 
-   - **Status**
+5. เพิ่ม output ชนิด `Text` อีกหนึ่งตัว
+6. ตั้งชื่อ output ที่สองว่า `ResponseMessage`
+7. ใส่ค่าของ `ResponseMessage` ตามนี้
 
-     ```text
-     Sent
-     ```
+   ```text
+   ส่งสรุปทดสอบแล้ว
+   ```
+8.  กด `Save draft`
+9.  กด `Publish`
+10. เช็คว่า flow มีสถานะ Published สมบูรณ์ หากไม่สามารถ publish ได้ให้แจ้งผู้ดูแล
+11. ถ้าการ publish สำเร็จ ให้กดปุ่ม `Back to agent` เพื่อเพิ่ม flow เข้า tool ของ Agent
 
-   - **ResponseMessage**
+   ⚠️ ถ้ากลับมาที่หน้า Agent > Tools แล้วยังไม่เห็น flow ที่เพิ่ม ให้ทำการกดปุ่ม `+ Add tools` เองและเลือก flow ที่เพิ่ง publish ตามชื่อของเราที่ตั้งไว้
 
-     ```text
-     ส่งสรุปทดสอบแล้วไปยัง inbox ที่ได้รับอนุญาต
-     ```
+#### Checkpoint
 
-5. ทำตามตัวอย่างของผู้สอนเพื่อเพิ่ม failure response เป็น parallel branch หลัง send action โดย `Configure run after` เลือกเฉพาะ failed และ timed out ของ send action ไม่ให้ทำงานหลัง success ตั้ง Text outputs ชื่อเดิมทั้งสองตัว
+Flow มี 3 node ตามแผนภาพ และมี `Respond to the agent` เพียงตัวเดียว ข้อความ `Sent` จะตอบกลับเมื่อขั้นตอนส่ง email สำเร็จเท่านั้น
 
-   - **Status**
-
-     ```text
-     Failed
-     ```
-
-   - **ResponseMessage**
-
-     ```text
-     ยังยืนยันการส่งสำเร็จไม่ได้ กรุณาตรวจ Run history และ mailbox ก่อนลองใหม่
-     ```
-
-6. ตรวจว่าทุก response ใช้ชื่อและชนิด outputs ตรงกัน ตั้ง `Settings` > `Networking` > `Asynchronous response` เป็น `Off` ทุก response แล้ว `Save draft` และ `Publish`
-
-### Checkpoint
-
-มี send action เดียว ผล Sent เกิดหลัง success เท่านั้น และ failure response ไม่อ้างว่าส่งสำเร็จ ผู้สอนช่วยตรวจ run-after ก่อนทดสอบ
+> **หากส่งไม่สำเร็จ:** flow นี้จะไม่ตอบกลับว่า `Sent` และไม่มี branch ตอบกลับกรณีล้มเหลว ให้ตรวจข้อผิดพลาดใน Run history และตรวจ mailbox ก่อนตัดสินใจทดสอบใหม่ เพื่อป้องกันการส่งซ้ำ
 
 ---
 
-## Practice 4: ทดสอบ flow และเก็บหลักฐาน
+### Practice 4: ทดสอบส่ง email ด้วยตนเอง
 
 <PracticeIllustration id="ex04-p04" />
 
-**Primary target:** ยืนยัน input และผลจริงของการทดสอบ flow ด้วยตนเอง
+**เป้าหมาย:** ตรวจว่า flow ส่ง email และตอบกลับได้จริง
 
-1. ตรวจว่า body มาจากฉบับที่ review แล้วและได้รับอนุญาตให้ทดสอบส่ง จากนั้นเปิด `Test` ใน flow designer
-2. ใส่ approved test inbox ใน `RecipientEmail` และวาง body จาก Exercise 3 ใน `EmailBody` แล้วสั่งทดสอบหนึ่งครั้ง
-3. ตรวจ Run history และ mailbox เทียบผู้รับ Subject และ body กับ input บันทึก T09 ต้องเห็น email หนึ่งฉบับสำหรับการสั่งทดสอบนี้
-4. ทดสอบ destination guard โดยใช้ค่าต่อไปนี้แทนผู้รับ แต่คง body เดิม
+#### Steps
+
+1. กดดูเมนู Flow ด้านซ้ายมือ ของ Copilot Studio Portal
+2. หา flow ชื่อ `Send Reviewed Training Brief` และกดเพื่อเปิด
+3. กดปุ่ม `Edit` ทางด้านบนซ้ายเพื่อเข้าสู่โหมด Designer เพื่อแก้ไข flow
+4. กดปุ่ม `Test` ทางด้านบนขวา เพื่อเข้าสู่โหมดทดสอบ flow
+5. เลือก `Manually` เพื่อทดสอบ flow ด้วยตนเอง และกดปุ่ม `Test`
+6. ตัวอย่างสำหรับทดสอบ:
 
    ```text
-   blocked@example.invalid
+   เรียนทีม Service Operations
+
+   สรุปคำขอ CASE-201:
+   - หัวข้อ: ขอความช่วยเหลือในการตรวจสอบบริการ
+   - ระดับความสำคัญ: ปานกลาง
+   - การดำเนินการ: กรุณาตรวจสอบและแจ้งผลกลับ
+
+   ขอบคุณครับ
+   ```
+7. ใส่ email ของ inbox ทดสอบที่ผู้สอนอนุญาตในช่อง `RecipientEmail`
+8. วางเนื้อหาที่เตรียมไว้ในช่อง `EmailBody`
+9.  กดเริ่มทดสอบเพียงหนึ่งครั้ง
+
+10. เปิด Run history ของการทดสอบครั้งนี้
+11. ตรวจว่า `Send an email (V2)` มีสถานะการทำงานเป็น Succeed
+12. เปิด inbox ทดสอบ ตรวจว่าได้รับ email หนึ่งฉบับจากการทดสอบครั้งนี้
+
+
+#### Checkpoint
+
+เห็นผลตอบกลับใน Run history และพบ email ใน inbox ทดสอบ
+
+---
+
+## Scenario 2: ให้ Agent เรียก flow เมื่อผู้ใช้ยืนยันส่ง
+
+ต่อไปจะนำ flow มาเป็นเครื่องมือของ Agent แล้วลองจัดรูปแบบและส่ง email ในบทสนทนาเดียวกัน
+
+### Practice 5: ตรวจเครื่องมือและ inputs ใน Agent
+
+**เป้าหมาย:** ให้ Agent รู้ว่าเครื่องมือแต่ละตัวรับข้อมูลอะไร
+
+#### Steps
+
+1. กลับไปเปิด Agent ชื่อ Service Request Assistant
+2. เปิดหน้า `Tools`
+3. เลือก `Send Reviewed Training Brief`
+
+   หากยังไม่มี ให้กด `Add a tool` หรือ `+ Add tools` ตาม UI ที่เห็น แล้วเลือก flow ชื่อนี้ ไม่ต้องสร้าง flow ใหม่
+
+4. ใส่ Description ของเครื่องมือตามนี้
+
+   ```text
+   Sends reviewed email content to a test inbox. Use only when the user explicitly confirms sending and provides the recipient. Do not use for drafting or revising content.
    ```
 
-5. ตรวจว่าได้ `Blocked` และ send action ไม่ถูกเรียก บันทึก T05 แยกจากการส่งที่อนุญาต
-6. ให้ผู้สอนตรวจกรณี body ว่าง/มีแต่ช่องว่างและ failure handling ตาม T06–T07 หากไม่ได้รันด้วยตนเองให้บันทึกว่าเป็น instructor evidence หรือ Not run
-7. จดชื่อ flow, Environment, inputs `RecipientEmail` / `EmailBody` และ outputs `Status` / `ResponseMessage` ตรวจว่า flow เป็น Published และยังไม่ได้เพิ่มเป็น agent-level tool
+5. เปิดส่วน `Inputs`
+6. ตรวจว่า `RecipientEmail` และ `EmailBody` ใช้ `Fill using` เป็น `Dynamically fill with AI`
+7. ใส่ Description ของ `RecipientEmail` ตามนี้
 
-### Checkpoint
+   ```text
+   inbox address provided by the user. Ask the user if it is missing. Never invent an address.
+   ```
 
-มีหลักฐาน input สองตัว ผลตอบกลับ และ mailbox ตามที่รันจริง การดูชื่อ flow หรือสถานะ Published อย่างเดียวไม่ยืนยันการส่งสำเร็จ
+8. ใส่ Description ของ `EmailBody` ตามนี้
+
+   ```text
+   The latest email body shown to the user and confirmed. Preserve the exact content.
+   ```
+
+9. กด `Save`
+10. เปิดเครื่องมือ `Format Service Brief`
+11. ตรวจว่า inputs ยังเป็น `CaseNotes` และ `BriefStyle` จาก Exercise 3
+
+#### Checkpoint
+
+หน้า Tools มีทั้งเครื่องมือจัดรูปแบบและเครื่องมือส่ง email โดยแต่ละตัวมี inputs สองตัวตรงตามชื่อที่กำหนด
+
+---
+
+### Practice 6: เพิ่ม Instructions สำหรับเรียก flow
+
+**เป้าหมาย:** ให้ Agent แยกคำขอร่างข้อความออกจากคำขอส่งจริง
+
+#### Steps
+
+1. เปิดหน้า `Overview` ของ Agent
+2. เปิดแก้ไข `Instructions`
+3. เพิ่มข้อความนี้ต่อท้าย โดยเก็บ Instructions เดิมไว้
+
+   ```text
+   ## Sending a reviewed brief
+   - Use Send Reviewed Training Brief only when the user confirms that the email body has been reviewed, explicitly requests sending, and provides the approved test inbox.
+   - If the recipient is missing, the body is empty, or review has not been confirmed, ask for the missing information first.
+   - If the tool fails or returns no result, explain that sending is not confirmed. Ask the user to check Run history and the inbox before trying again.
+   ```
+
+4. เลือกข้อความ `Send Reviewed Training Brief` ในเงื่อนไขข้อแรก แล้วลบเฉพาะชื่อเครื่องมือนี้
+5. กด `+ Add` ที่ตำแหน่งเดิม
+6. เลือกเครื่องมือ `Send Reviewed Training Brief` เพื่อแทรกเป็นการอ้างอิง Tool จริง เหมือนใน Exercise 3
+7. กด `Save`
+
+#### Checkpoint
+
+Instructions เดิมยังอยู่ และมีเงื่อนไขใหม่ให้ส่งเฉพาะเมื่อผู้ใช้ยืนยันพร้อมระบุผู้รับที่อนุญาต เงื่อนไขนี้กำกับ Agent แต่ไม่ได้เพิ่มตัวตรวจเงื่อนไขใน flow
+
+---
+
+### Practice 7: ทดลองจัดรูปแบบและส่งผ่าน Test panel
+
+**เป้าหมาย:** เห็น Agent เรียกเครื่องมือถูกตัว พร้อมตรวจผลการส่งจริง
+
+#### Steps
+
+1. เปิด `Test your agent`
+2. เริ่ม session ใหม่
+3. ส่ง prompt นี้เพื่อเรียกเครื่องมือจัดรูปแบบก่อน
+
+   ```text
+   Case ID: CASE-201
+   บันทึกวันที่: 2 October 2026
+   ผู้ใช้ขอให้ทีมบริการช่วยติดตามคำขอเอกสารที่ส่งผ่านช่องทางดิจิทัล
+   ทีมสาขาพบเลขอ้างอิง CASE-201 ในบันทึก แต่ยังไม่มีผลการตรวจสอบระบบ
+   ผู้ใช้ขอทราบช่องทางติดตามต่อ
+   ยังไม่ทราบวันที่ยื่นคำขอและชนิดเอกสาร
+
+   ใช้ Format Service Brief จัดบันทึกนี้เป็นร่างเนื้อหา email แบบกระชับ (Concise) ให้ฉันตรวจ ยังไม่ต้องส่ง email
+   ```
+
+4. เปิด activity ของการทดสอบเพื่อดู Tool call
+5. ตรวจว่าเรียก `Format Service Brief`
+6. ตรวจว่ายังไม่มีการเรียก `Send Reviewed Training Brief`
+
+7. คัดลอก prompt นี้ แล้วแทน `[ใส่ email ที่ผู้สอนกำหนด]` ด้วย inbox เดียวกับใน Instructions
+
+   ```text
+   ส่งเนื้อหาฉบับนี้ ไปที่ [ใส่ email ที่ผู้สอนกำหนด] เพียงหนึ่งครั้ง
+   ```
+
+8. ส่ง prompt ที่แก้แล้วใน session เดิม
+9.  ตรวจ activity ว่ามีการเรียก `Send Reviewed Training Brief` หนึ่งครั้ง
+10. ตรวจ input `RecipientEmail` ว่าตรงกับ inbox ที่อนุญาต
+11. ตรวจ input `EmailBody` ว่าตรงกับร่างฉบับที่ตรวจแล้ว
+12. ตรวจผลของเครื่องมือว่า `Status` เป็น `Sent` และมี `ResponseMessage`
+13. เปิด Run history ของ flow เพื่อตรวจว่ารอบที่ Agent เรียกส่ง email สำเร็จ
+14. เปิด inbox ทดสอบเพื่อตรวจ email ใหม่หนึ่งฉบับ โดยเทียบผู้รับ หัวข้อ และเนื้อหากับรอบนี้
+
+
+#### Checkpoint
+
+คำขอแรกเรียกเฉพาะเครื่องมือจัดรูปแบบ คำขอยืนยันส่งจึงเรียก flow เห็น inputs และผลตอบกลับจริง พร้อม email ที่ตรงกับเนื้อหาที่ตรวจแล้ว ไม่ใช้เพียงข้อความตอบของ Agent เป็นหลักฐานว่าส่งสำเร็จ
+
+## Expected Output
+
+- Flow ชื่อ `Send Reviewed Training Brief` ที่มีเพียง trigger → ส่ง email → ตอบกลับ Agent
+- Inputs ชนิด Text ชื่อ `RecipientEmail` และ `EmailBody`
+- Outputs ชนิด Text ชื่อ `Status` และ `ResponseMessage`
+- หลักฐานการทดสอบจาก Tool call, Run history และ email ที่ได้รับจริง
+- Flow เป็น Published และเพิ่มเป็นเครื่องมือในหน้า Tools ของ Agent แล้ว
+- Instructions ที่แยกการจัดรูปแบบออกจากการส่ง และเรียก flow เมื่อผู้ใช้ยืนยันส่งไปยัง inbox ที่อนุญาต
 
 ## Summary และสิ่งที่จะใช้ต่อ
 
-เราสร้างและทดสอบบริการส่งด้วยตนเองแล้ว ใน Exercise 5 จะเปิด Agent ตัวเดิมและลอง Topic แบบหนึ่งคำถามสองตัวเลือก เพื่อให้คำแนะนำเรื่องการตรวจสรุป CASE-201 กิจกรรมนั้นไม่มีการเรียก flow หรือส่ง email ครับ
+เราสร้าง flow แบบ 3 node และทดสอบทั้งใน flow designer และผ่าน Agent แล้ว ผู้เรียนตรวจเนื้อหาและยืนยันผู้รับก่อนให้ Agent ส่ง ใน Exercise 5 จะใช้ Agent ตัวเดิมลอง Topic แบบหนึ่งคำถามสองตัวเลือก เพื่อให้คำแนะนำเรื่องการตรวจสรุป CASE-201 กิจกรรมนั้นไม่มีการเรียก flow หรือส่ง email ครับ
 
 [กลับสารบัญ](/) | [Exercise 5: Topics](/exercises/05-topics)

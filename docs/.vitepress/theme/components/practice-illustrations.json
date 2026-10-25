@@ -14,6 +14,21 @@
       }
     ]
   },
+  "ex01-test-response-language": {
+    "alt": "เจ้าหน้าที่เปรียบเทียบคำตอบสองใบข้างแผงทดสอบและบัตรคำแนะนำ",
+    "width": 1774,
+    "height": 887,
+    "variants": [
+      {
+        "src": "/images/practices/ex01-test-response-language-768.webp",
+        "width": 768
+      },
+      {
+        "src": "/images/practices/ex01-test-response-language-1440.webp",
+        "width": 1440
+      }
+    ]
+  },
   "ex01-p02": {
     "alt": "เพื่อนร่วมงานส่งคู่มือการทำงานให้เจ้าหน้าที่",
     "width": 1774,

@@ -17,7 +17,6 @@ next: {"text": "ทบทวนหลักฐานและ gap", "link": "/re
 ## Prerequisites
 
 - Service Request Assistant ตัวเดิม และสรุป CASE-201 ที่เก็บไว้จาก Exercise 3
-- <DownloadFile file="test-log.csv">Test log</DownloadFile> สำหรับ Q01–Q03
 
 ## Practice 1: สร้างคำถามและคำแนะนำสองเส้นทาง
 
@@ -25,25 +24,26 @@ next: {"text": "ทบทวนหลักฐานและ gap", "link": "/re
 
 **Primary target:** ให้คำตอบของผู้ใช้เลือก Message ที่ตรงกันใน Topic
 
-1. เปิด Agent ตัวเดิม ไปที่ `Topics` เลือก `Add a topic` > `From blank` แล้วตั้งชื่อ
+1. เปิด Agent ตัวเดิม
+2. ไปที่หน้า `Topics` เลือก `Add a topic` > `From blank` แล้วตั้งชื่อ
 
    ```text
    Review Readiness
    ```
 
-2. ที่ Trigger แบบ `The agent chooses` ใส่คำอธิบายว่า Topic นี้ใช้เมื่อใด หากเป็น `User says a phrase` ให้ใช้ข้อความทดสอบในขั้น 7 เป็น trigger phrase โดยให้ผู้สอนช่วยตรวจตาม UI ที่ปรากฏ
+3. ที่ Trigger แบบ `The agent chooses` ใส่คำอธิบายว่า Topic นี้ใช้เมื่อใด หากเป็น `User says a phrase` ให้ใช้ข้อความทดสอบในขั้น 7 เป็น trigger phrase โดยให้ผู้สอนช่วยตรวจตาม UI ที่ปรากฏ
 
    ```text
-   ใช้เมื่อผู้ใช้ต้องการตรวจความพร้อมของสรุป CASE-201 โดยถามว่าตรวจข้อเท็จจริงแล้วหรือยัง แล้วให้คำแนะนำตามคำตอบ Topic นี้ไม่ส่ง email และไม่เรียก flow
+   Use when the user wants to check whether the CASE-201 brief is ready. Ask whether the facts have been reviewed, then provide guidance based on the answer. This topic does not send email or call a flow.
    ```
 
-3. ใต้ Trigger เพิ่ม `Ask a question` แล้ววางคำถาม
+4. ใต้ Trigger เพิ่ม `Ask a question` node แล้ววางคำถาม
 
    ```text
-   สรุป CASE-201 ผ่านการตรวจข้อเท็จจริงแล้วหรือยัง?
+   ตรวจสอบข้อเท็จจริงในสรุป CASE-201 แล้วหรือยัง?
    ```
 
-4. ตั้ง `Identify` เป็น `Multiple choice options` เพิ่มสองตัวเลือกทีละค่า คงตัวแปรที่ระบบสร้างใน `Save user response as` ไว้ตามเดิม
+5. ตั้ง `Identify` เป็น `Multiple choice options` เพิ่มสองตัวเลือกทีละค่า คงตัวแปรที่ระบบสร้างใน `Save user response as` ไว้ตามเดิม
 
    - **ตัวเลือกแรก**
 
@@ -57,37 +57,47 @@ next: {"text": "ทบทวนหลักฐานและ gap", "link": "/re
      ยังต้องแก้
      ```
 
-5. ใช้ branch ของแต่ละตัวเลือกที่แสดงบน canvas แล้วเพิ่ม `Send a message` หนึ่งข้อความต่อ branch หากยังไม่เห็นทางแยก ให้ผู้สอนช่วยตรวจ canvas ก่อนทำต่อ
+6. ใช้ branch ของแต่ละตัวเลือกที่แสดงบน canvas แล้วเพิ่ม `Send a message` หนึ่งข้อความต่อ branch หากยังไม่เห็นทางแยก ให้ผู้สอนช่วยตรวจ canvas ก่อนทำต่อ
 
    - **branch ตรวจแล้ว**
 
      ```text
-     ก่อนส่งต่อ ให้ทบทวน Case ID ข้อเท็จจริง ข้อมูลที่ขาด และปลายทางอีกครั้ง การตอบข้อนี้ยังไม่ได้ส่ง email
+     ก่อนส่งต่อ ให้ตรวจ Case ID ข้อเท็จจริง ข้อมูลที่ยังขาด และผู้รับอีกครั้ง การเลือกคำตอบนี้ยังไม่ได้ส่ง email
      ```
 
    - **branch ยังต้องแก้**
 
      ```text
-     กลับไปแก้สรุป CASE-201 ให้ตรงกับโน้ต แยกข้อมูลที่ยังไม่มี แล้วตรวจข้อเท็จจริงใหม่ก่อนส่งต่อ
+     แก้สรุป CASE-201 ให้ตรงกับบันทึก ระบุข้อมูลที่ยังขาดให้ชัดเจน แล้วตรวจข้อเท็จจริงอีกครั้งก่อนส่งต่อ
      ```
 
-6. ให้แต่ละ branch จบหลัง Message ของตน ไม่เชื่อมสองข้อความให้แสดงต่อกัน แล้ว `Save` ตรวจว่า Topic มีหนึ่ง Question สองตัวเลือก และสอง Message โดยไม่มี tool/action สำหรับส่งข้อมูล
-7. เริ่ม session ใหม่ใน `Test your agent` ส่งข้อความนี้ แล้วเลือก **ตรวจแล้ว** ตรวจว่าข้อความตรงกับ branch แรก บันทึก Q01
+7. กด `Save`
+8. ตรวจว่า Topic มีหนึ่ง Question สองตัวเลือก และสอง Message โดยไม่มี tool/action สำหรับส่งข้อมูล
+9. กลับไปหน้า `Overview` ของ Agent แล้วเพิ่ม guideline นี้ต่อท้าย `Instructions` โดยเก็บข้อความเดิมไว้
+
+   ```text
+   ## Review readiness guideline
+   - Use the Review Readiness topic when the user asks to check whether the CASE-201 brief is ready. This check must not send email or call the sending flow.
+   ```
+
+   แทนชื่อ `Review Readiness` ในข้อความด้วยการอ้างอิง Topic จริง โดยลบเฉพาะชื่อ วางเคอร์เซอร์ที่เดิม แล้วกด `+ Add` เพื่อเลือก Topic `Review Readiness` จากนั้นกด `Save`
+
+10. เริ่ม session ใหม่ใน `Test your agent` ส่งข้อความนี้ แล้วเลือก **ตรวจแล้ว** ตรวจว่าข้อความตรงกับ branch แรก
 
    ```text
    ช่วยตรวจความพร้อมของสรุป CASE-201
    ```
 
-8. เริ่ม session ใหม่ ส่งข้อความเดิม แล้วเลือก **ยังต้องแก้** ตรวจว่าข้อความตรงกับ branch ที่สอง บันทึก Q02 ดูเส้นทางที่ทำงานจริงใน canvas/activity หาก Topic ไม่ทำงาน ให้บันทึก gap และให้ผู้สอนตรวจ Trigger
-9. ให้ผู้สอนช่วยตรวจ Q03 โดยเริ่ม session ใหม่ เข้า Topic แล้วตอบคำที่ไม่ตรงกับตัวเลือก เช่นข้อความนี้ สังเกตการถามใหม่หรือ fallback ตามค่าจริง ต้องไม่ถือว่าผู้ใช้เลือก **ตรวจแล้ว** และต้องไม่มี flow call หรือ email เพิ่ม
+11. เริ่ม session ใหม่ ส่งข้อความทดสอบเดิมจากขั้น 10 ที่แสดงด้านล่าง แล้วเลือก **ยังต้องแก้** ตรวจว่าข้อความตรงกับ branch ที่สอง ดูเส้นทางที่ทำงานจริงใน canvas/activity หาก Topic ไม่ทำงาน ให้ผู้สอนช่วยตรวจ Trigger
 
    ```text
-   ขอข้ามคำถามนี้
+   ช่วยตรวจความพร้อมของสรุป CASE-201
    ```
+
 
 ### Checkpoint
 
-เลือก **ตรวจแล้ว** และ **ยังต้องแก้** ในคนละ session แล้วเห็น Message ที่ตรงกับตัวเลือก ชี้ Question และสองเส้นทางบน canvas ได้ หากยังไม่มีผลจริงให้คง `Not run` หรือบันทึก `Blocked`
+เลือก **ตรวจแล้ว** และ **ยังต้องแก้** ในคนละ session แล้วเห็น Message ที่ตรงกับตัวเลือก ชี้ Question และสองเส้นทางบน canvas ได้
 
 ## สิ่งที่ควรจำ
 

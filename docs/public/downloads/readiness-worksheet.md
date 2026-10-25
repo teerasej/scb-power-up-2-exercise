@@ -1,14 +1,14 @@
 # Readiness worksheet — ทบทวน Agent ที่เราสร้าง
 
-## Practice 1: ทบทวนหลักฐาน
+## Practice 1: เปรียบเทียบผลที่คาดหวังกับผลจริง
 
-**Primary target:** แยกผลที่ตรวจแล้วจากส่วนที่ยังไม่ได้ทดสอบ
+**Primary target:** เปรียบเทียบ Expected Result กับ Actual Result จากสิ่งที่สังเกตระหว่างทำ Exercise
 
-1. เปิด Test log ของ Service Request Assistant เลือกตัวอย่างจาก Instructions, Knowledge, Prompt, flow และ Topic ตามที่ได้ทำจริง
-2. บอก Expected, Actual และที่เก็บ source/tool/run evidence ของแต่ละตัวอย่าง
-3. ถ้าไม่มี Actual ให้ใส่ Not run ไม่สรุปจากหน้าตา Agent และระบุ instructor evidence แยกจากผลของตน
+1. เลือกตัวอย่างจาก Instructions, Knowledge, Prompt, flow และ Topic ตามที่ได้ทำจริง
+2. บอก `Expected Result` และ `Actual Result` ของแต่ละตัวอย่างจากสิ่งที่สังเกต
+3. หากยังไม่ได้ทดลองส่วนใด ให้บอกตามตรงว่ายังไม่ได้ทดสอบ และไม่สรุปจากหน้าตา Agent
 
-**Checkpoint:** เห็นว่าส่วนใดตรวจแล้ว ส่วนใดยังต้องทดสอบ และมี boundary case ที่ตรวจได้ตามกิจกรรมที่ทำ
+**Checkpoint:** อธิบายความต่างระหว่างผลที่คาดหวังกับผลที่เกิดขึ้นจริงได้ และรู้ว่าส่วนใดยังต้องทดลอง
 
 ## Practice 2: ระบุ approval point
 
@@ -34,7 +34,7 @@
 
 **Primary target:** ระบุงานแก้ไขที่มีเจ้าของและเกณฑ์ตรวจซ้ำ
 
-1. เติม Gap list จาก failure, Blocked หรือส่วนที่ยัง Not run หากไม่พบ functional gap ให้จดสิ่งที่ยังต้องยืนยันก่อนใช้งานต่อ
-2. ระบุ Must fix before demo หรือ Improve later พร้อม owner และหลักฐานที่จะใช้ retest
+1. เติม Gap list จาก failure, Blocked หรือส่วนที่ยังไม่ได้ทดสอบ หากไม่พบ functional gap ให้จดสิ่งที่ยังต้องยืนยันก่อนใช้งานต่อ
+2. ระบุ Must fix before demo หรือ Improve later พร้อม owner และวิธีตรวจซ้ำ
 
-**Checkpoint:** มีงานถัดไปที่ตรวจได้ ไม่ใช้ความสวยของคำตอบแทน evidence; บันทึกเฉพาะเกณฑ์ที่ผู้สอนยืนยันแล้ว
+**Checkpoint:** มีงานถัดไปที่ตรวจได้ ไม่ใช้ความสวยของคำตอบแทนผลการทดสอบจริง และใช้เฉพาะเกณฑ์ที่ผู้สอนยืนยันแล้ว
